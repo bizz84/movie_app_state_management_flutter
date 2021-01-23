@@ -5,26 +5,26 @@ author: null
 homepage: null
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0-133.2.beta <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  freezed_annotation: ^0.12.0
+  freezed_annotation: ^0.13.0-nullsafety.0
   http: ^0.12.2
-  json_annotation: ^3.1.1
+  json_annotation: ^4.0.0-nullsafety.0
   path_provider: ^1.6.24
-  sembast: ^2.4.8+1
+  sembast: ^3.0.0-nullsafety.3
   transparent_image: ^1.0.0
-  rxdart: ^0.25.0
+  rxdart: ^0.26.0-nullsafety.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^1.10.11
-  freezed: ^0.12.6
-  json_serializable: ^3.5.1
+  freezed: ^0.13.0-nullsafety.0
+  json_serializable: ^4.0.0-nullsafety.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter.
