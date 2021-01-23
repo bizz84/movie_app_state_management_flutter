@@ -6,7 +6,7 @@ import 'package:collection/collection.dart';
 class FavouriteMovies {
   final Set<int> favouriteIDs;
   FavouriteMovies({
-    this.favouriteIDs,
+    required this.favouriteIDs,
   });
 
   String toJson() => json.encode(favouriteIDs.toList());

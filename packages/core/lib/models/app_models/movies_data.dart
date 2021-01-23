@@ -6,7 +6,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 class MoviesData {
   final Map<int, TMDBMovieBasic> movies;
   MoviesData({
-    this.movies,
+    required this.movies,
   });
 
   Map<String, dynamic> toMap() {
@@ -17,8 +17,6 @@ class MoviesData {
   }
 
   factory MoviesData.fromMap(Map<String, dynamic> map) {
-    if (map == null) return null;
-
     final movies = map.map((key, value) => MapEntry<int, TMDBMovieBasic>(
           int.parse(key),
           TMDBMovieBasic.fromJson(value),

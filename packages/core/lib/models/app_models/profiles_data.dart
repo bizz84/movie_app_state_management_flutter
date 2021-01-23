@@ -8,7 +8,7 @@ class ProfilesData {
   final Map<String, Profile> profiles;
 
   /// id of the currently selected profile
-  final String selectedId;
+  final String? selectedId;
   ProfilesData({
     this.profiles = const {},
     this.selectedId,
@@ -21,7 +21,7 @@ class ProfilesData {
   }
 
   factory ProfilesData.fromMap(Map<String, dynamic> map) {
-    if (map == null || map['profiles'] == null) return ProfilesData();
+    if (map['profiles'] == null) return ProfilesData();
 
     final profilesMap = map['profiles'] as Map<String, dynamic>;
     final profiles = profilesMap.map((key, value) => MapEntry<String, Profile>(
@@ -36,8 +36,9 @@ class ProfilesData {
 
   String toJson() => json.encode(toMap());
 
-  factory ProfilesData.fromJson(String source) =>
-      ProfilesData.fromMap(json.decode(source));
+  factory ProfilesData.fromJson(String? source) => source != null
+      ? ProfilesData.fromMap(json.decode(source))
+      : ProfilesData();
 
   @override
   String toString() =>
@@ -57,8 +58,8 @@ class ProfilesData {
   int get hashCode => profiles.hashCode ^ selectedId.hashCode;
 
   ProfilesData copyWith({
-    Map<String, Profile> profiles,
-    String selectedId,
+    Map<String, Profile>? profiles,
+    String? selectedId,
   }) {
     return ProfilesData(
       profiles: profiles ?? this.profiles,
