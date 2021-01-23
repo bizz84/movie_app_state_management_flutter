@@ -8,11 +8,11 @@ class MoviesGrid extends StatelessWidget {
     Key? key,
     required this.movies,
     this.controller,
-    required this.favouriteBuilder,
+    this.favouriteBuilder,
   }) : super(key: key);
   final List<TMDBMovieBasic> movies;
   final ScrollController? controller;
-  final Widget Function(BuildContext, TMDBMovieBasic) favouriteBuilder;
+  final Widget Function(BuildContext, TMDBMovieBasic)? favouriteBuilder;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,9 @@ class MoviesGrid extends StatelessWidget {
         return PosterTile(
           imagePath: movie.posterPath!,
           //debugIndex: index,
-          favouriteBuilder: (context) => favouriteBuilder(context, movie),
+          favouriteBuilder: favouriteBuilder != null
+              ? (context) => favouriteBuilder!.call(context, movie)
+              : null,
         );
       },
       controller: controller,
