@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'create_profile_state.dart';
 
@@ -13,55 +13,51 @@ T _$identity<T>(T value) => value;
 class _$CreateProfileStateTearOff {
   const _$CreateProfileStateTearOff();
 
-// ignore: unused_element
   _NoError noError() {
     return const _NoError();
   }
 
-// ignore: unused_element
   _Error error(String errorText) {
     return _Error(
       errorText,
     );
   }
 
-// ignore: unused_element
   _Loading loading() {
     return const _Loading();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CreateProfileState = _$CreateProfileStateTearOff();
 
 /// @nodoc
 mixin _$CreateProfileState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult noError(),
-    @required TResult error(String errorText),
-    @required TResult loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() noError,
+    required TResult Function(String errorText) error,
+    required TResult Function() loading,
   });
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult noError(),
-    TResult error(String errorText),
-    TResult loading(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? noError,
+    TResult Function(String errorText)? error,
+    TResult Function()? loading,
+    required TResult orElse(),
   });
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult noError(_NoError value),
-    @required TResult error(_Error value),
-    @required TResult loading(_Loading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NoError value) noError,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Loading value) loading,
   });
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult noError(_NoError value),
-    TResult error(_Error value),
-    TResult loading(_Loading value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NoError value)? noError,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loading value)? loading,
+    required TResult orElse(),
   });
 }
 
@@ -118,26 +114,22 @@ class _$_NoError implements _NoError {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult noError(),
-    @required TResult error(String errorText),
-    @required TResult loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() noError,
+    required TResult Function(String errorText) error,
+    required TResult Function() loading,
   }) {
-    assert(noError != null);
-    assert(error != null);
-    assert(loading != null);
     return noError();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult noError(),
-    TResult error(String errorText),
-    TResult loading(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? noError,
+    TResult Function(String errorText)? error,
+    TResult Function()? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (noError != null) {
       return noError();
     }
@@ -146,26 +138,22 @@ class _$_NoError implements _NoError {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult noError(_NoError value),
-    @required TResult error(_Error value),
-    @required TResult loading(_Loading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NoError value) noError,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Loading value) loading,
   }) {
-    assert(noError != null);
-    assert(error != null);
-    assert(loading != null);
     return noError(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult noError(_NoError value),
-    TResult error(_Error value),
-    TResult loading(_Loading value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NoError value)? noError,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loading value)? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (noError != null) {
       return noError(this);
     }
@@ -195,7 +183,7 @@ class __$ErrorCopyWithImpl<$Res> extends _$CreateProfileStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object errorText = freezed,
+    Object? errorText = freezed,
   }) {
     return _then(_Error(
       errorText == freezed ? _value.errorText : errorText as String,
@@ -205,7 +193,7 @@ class __$ErrorCopyWithImpl<$Res> extends _$CreateProfileStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Error implements _Error {
-  const _$_Error(this.errorText) : assert(errorText != null);
+  const _$_Error(this.errorText);
 
   @override
   final String errorText;
@@ -228,32 +216,29 @@ class _$_Error implements _Error {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(errorText);
 
+  @JsonKey(ignore: true)
   @override
   _$ErrorCopyWith<_Error> get copyWith =>
       __$ErrorCopyWithImpl<_Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult noError(),
-    @required TResult error(String errorText),
-    @required TResult loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() noError,
+    required TResult Function(String errorText) error,
+    required TResult Function() loading,
   }) {
-    assert(noError != null);
-    assert(error != null);
-    assert(loading != null);
     return error(errorText);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult noError(),
-    TResult error(String errorText),
-    TResult loading(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? noError,
+    TResult Function(String errorText)? error,
+    TResult Function()? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(errorText);
     }
@@ -262,26 +247,22 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult noError(_NoError value),
-    @required TResult error(_Error value),
-    @required TResult loading(_Loading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NoError value) noError,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Loading value) loading,
   }) {
-    assert(noError != null);
-    assert(error != null);
-    assert(loading != null);
     return error(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult noError(_NoError value),
-    TResult error(_Error value),
-    TResult loading(_Loading value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NoError value)? noError,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loading value)? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this);
     }
@@ -293,6 +274,7 @@ abstract class _Error implements CreateProfileState {
   const factory _Error(String errorText) = _$_Error;
 
   String get errorText;
+  @JsonKey(ignore: true)
   _$ErrorCopyWith<_Error> get copyWith;
 }
 
@@ -332,26 +314,22 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult noError(),
-    @required TResult error(String errorText),
-    @required TResult loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() noError,
+    required TResult Function(String errorText) error,
+    required TResult Function() loading,
   }) {
-    assert(noError != null);
-    assert(error != null);
-    assert(loading != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult noError(),
-    TResult error(String errorText),
-    TResult loading(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? noError,
+    TResult Function(String errorText)? error,
+    TResult Function()? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -360,26 +338,22 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult noError(_NoError value),
-    @required TResult error(_Error value),
-    @required TResult loading(_Loading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NoError value) noError,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Loading value) loading,
   }) {
-    assert(noError != null);
-    assert(error != null);
-    assert(loading != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult noError(_NoError value),
-    TResult error(_Error value),
-    TResult loading(_Loading value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NoError value)? noError,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loading value)? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }

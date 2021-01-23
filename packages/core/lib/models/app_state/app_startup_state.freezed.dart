@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'app_startup_state.dart';
 
@@ -13,17 +13,14 @@ T _$identity<T>(T value) => value;
 class _$AppStartupStateTearOff {
   const _$AppStartupStateTearOff();
 
-// ignore: unused_element
   _Initializing initializing() {
     return const _Initializing();
   }
 
-// ignore: unused_element
   _NeedsProfile needsProfile() {
     return const _NeedsProfile();
   }
 
-// ignore: unused_element
   _ProfileLoaded profileLoaded(ProfilesData profilesData) {
     return _ProfileLoaded(
       profilesData,
@@ -32,36 +29,35 @@ class _$AppStartupStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AppStartupState = _$AppStartupStateTearOff();
 
 /// @nodoc
 mixin _$AppStartupState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initializing(),
-    @required TResult needsProfile(),
-    @required TResult profileLoaded(ProfilesData profilesData),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initializing,
+    required TResult Function() needsProfile,
+    required TResult Function(ProfilesData profilesData) profileLoaded,
   });
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initializing(),
-    TResult needsProfile(),
-    TResult profileLoaded(ProfilesData profilesData),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initializing,
+    TResult Function()? needsProfile,
+    TResult Function(ProfilesData profilesData)? profileLoaded,
+    required TResult orElse(),
   });
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initializing(_Initializing value),
-    @required TResult needsProfile(_NeedsProfile value),
-    @required TResult profileLoaded(_ProfileLoaded value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initializing value) initializing,
+    required TResult Function(_NeedsProfile value) needsProfile,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
   });
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initializing(_Initializing value),
-    TResult needsProfile(_NeedsProfile value),
-    TResult profileLoaded(_ProfileLoaded value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initializing value)? initializing,
+    TResult Function(_NeedsProfile value)? needsProfile,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    required TResult orElse(),
   });
 }
 
@@ -120,26 +116,22 @@ class _$_Initializing implements _Initializing {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initializing(),
-    @required TResult needsProfile(),
-    @required TResult profileLoaded(ProfilesData profilesData),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initializing,
+    required TResult Function() needsProfile,
+    required TResult Function(ProfilesData profilesData) profileLoaded,
   }) {
-    assert(initializing != null);
-    assert(needsProfile != null);
-    assert(profileLoaded != null);
     return initializing();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initializing(),
-    TResult needsProfile(),
-    TResult profileLoaded(ProfilesData profilesData),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initializing,
+    TResult Function()? needsProfile,
+    TResult Function(ProfilesData profilesData)? profileLoaded,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initializing != null) {
       return initializing();
     }
@@ -148,26 +140,22 @@ class _$_Initializing implements _Initializing {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initializing(_Initializing value),
-    @required TResult needsProfile(_NeedsProfile value),
-    @required TResult profileLoaded(_ProfileLoaded value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initializing value) initializing,
+    required TResult Function(_NeedsProfile value) needsProfile,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
   }) {
-    assert(initializing != null);
-    assert(needsProfile != null);
-    assert(profileLoaded != null);
     return initializing(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initializing(_Initializing value),
-    TResult needsProfile(_NeedsProfile value),
-    TResult profileLoaded(_ProfileLoaded value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initializing value)? initializing,
+    TResult Function(_NeedsProfile value)? needsProfile,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initializing != null) {
       return initializing(this);
     }
@@ -217,26 +205,22 @@ class _$_NeedsProfile implements _NeedsProfile {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initializing(),
-    @required TResult needsProfile(),
-    @required TResult profileLoaded(ProfilesData profilesData),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initializing,
+    required TResult Function() needsProfile,
+    required TResult Function(ProfilesData profilesData) profileLoaded,
   }) {
-    assert(initializing != null);
-    assert(needsProfile != null);
-    assert(profileLoaded != null);
     return needsProfile();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initializing(),
-    TResult needsProfile(),
-    TResult profileLoaded(ProfilesData profilesData),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initializing,
+    TResult Function()? needsProfile,
+    TResult Function(ProfilesData profilesData)? profileLoaded,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (needsProfile != null) {
       return needsProfile();
     }
@@ -245,26 +229,22 @@ class _$_NeedsProfile implements _NeedsProfile {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initializing(_Initializing value),
-    @required TResult needsProfile(_NeedsProfile value),
-    @required TResult profileLoaded(_ProfileLoaded value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initializing value) initializing,
+    required TResult Function(_NeedsProfile value) needsProfile,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
   }) {
-    assert(initializing != null);
-    assert(needsProfile != null);
-    assert(profileLoaded != null);
     return needsProfile(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initializing(_Initializing value),
-    TResult needsProfile(_NeedsProfile value),
-    TResult profileLoaded(_ProfileLoaded value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initializing value)? initializing,
+    TResult Function(_NeedsProfile value)? needsProfile,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (needsProfile != null) {
       return needsProfile(this);
     }
@@ -297,7 +277,7 @@ class __$ProfileLoadedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object profilesData = freezed,
+    Object? profilesData = freezed,
   }) {
     return _then(_ProfileLoaded(
       profilesData == freezed
@@ -309,7 +289,7 @@ class __$ProfileLoadedCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ProfileLoaded implements _ProfileLoaded {
-  const _$_ProfileLoaded(this.profilesData) : assert(profilesData != null);
+  const _$_ProfileLoaded(this.profilesData);
 
   @override
   final ProfilesData profilesData;
@@ -332,32 +312,29 @@ class _$_ProfileLoaded implements _ProfileLoaded {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(profilesData);
 
+  @JsonKey(ignore: true)
   @override
   _$ProfileLoadedCopyWith<_ProfileLoaded> get copyWith =>
       __$ProfileLoadedCopyWithImpl<_ProfileLoaded>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initializing(),
-    @required TResult needsProfile(),
-    @required TResult profileLoaded(ProfilesData profilesData),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initializing,
+    required TResult Function() needsProfile,
+    required TResult Function(ProfilesData profilesData) profileLoaded,
   }) {
-    assert(initializing != null);
-    assert(needsProfile != null);
-    assert(profileLoaded != null);
     return profileLoaded(profilesData);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initializing(),
-    TResult needsProfile(),
-    TResult profileLoaded(ProfilesData profilesData),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initializing,
+    TResult Function()? needsProfile,
+    TResult Function(ProfilesData profilesData)? profileLoaded,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (profileLoaded != null) {
       return profileLoaded(profilesData);
     }
@@ -366,26 +343,22 @@ class _$_ProfileLoaded implements _ProfileLoaded {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initializing(_Initializing value),
-    @required TResult needsProfile(_NeedsProfile value),
-    @required TResult profileLoaded(_ProfileLoaded value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initializing value) initializing,
+    required TResult Function(_NeedsProfile value) needsProfile,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
   }) {
-    assert(initializing != null);
-    assert(needsProfile != null);
-    assert(profileLoaded != null);
     return profileLoaded(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initializing(_Initializing value),
-    TResult needsProfile(_NeedsProfile value),
-    TResult profileLoaded(_ProfileLoaded value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initializing value)? initializing,
+    TResult Function(_NeedsProfile value)? needsProfile,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (profileLoaded != null) {
       return profileLoaded(this);
     }
@@ -397,5 +370,6 @@ abstract class _ProfileLoaded implements AppStartupState {
   const factory _ProfileLoaded(ProfilesData profilesData) = _$_ProfileLoaded;
 
   ProfilesData get profilesData;
+  @JsonKey(ignore: true)
   _$ProfileLoadedCopyWith<_ProfileLoaded> get copyWith;
 }

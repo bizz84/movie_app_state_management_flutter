@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'now_playing_state.dart';
 
@@ -13,7 +13,6 @@ T _$identity<T>(T value) => value;
 class _$NowPlayingStateTearOff {
   const _$NowPlayingStateTearOff();
 
-// ignore: unused_element
   _Data data(List<TMDBMovieBasic> movies, bool hasReachedMax) {
     return _Data(
       movies,
@@ -21,14 +20,12 @@ class _$NowPlayingStateTearOff {
     );
   }
 
-// ignore: unused_element
   _DataLoading dataLoading(List<TMDBMovieBasic> movies) {
     return _DataLoading(
       movies,
     );
   }
 
-// ignore: unused_element
   _Error error(String error) {
     return _Error(
       error,
@@ -37,36 +34,36 @@ class _$NowPlayingStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $NowPlayingState = _$NowPlayingStateTearOff();
 
 /// @nodoc
 mixin _$NowPlayingState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult data(List<TMDBMovieBasic> movies, bool hasReachedMax),
-    @required TResult dataLoading(List<TMDBMovieBasic> movies),
-    @required TResult error(String error),
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<TMDBMovieBasic> movies, bool hasReachedMax)
+        data,
+    required TResult Function(List<TMDBMovieBasic> movies) dataLoading,
+    required TResult Function(String error) error,
   });
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult data(List<TMDBMovieBasic> movies, bool hasReachedMax),
-    TResult dataLoading(List<TMDBMovieBasic> movies),
-    TResult error(String error),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<TMDBMovieBasic> movies, bool hasReachedMax)? data,
+    TResult Function(List<TMDBMovieBasic> movies)? dataLoading,
+    TResult Function(String error)? error,
+    required TResult orElse(),
   });
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult data(_Data value),
-    @required TResult dataLoading(_DataLoading value),
-    @required TResult error(_Error value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Data value) data,
+    required TResult Function(_DataLoading value) dataLoading,
+    required TResult Function(_Error value) error,
   });
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult data(_Data value),
-    TResult dataLoading(_DataLoading value),
-    TResult error(_Error value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Data value)? data,
+    TResult Function(_DataLoading value)? dataLoading,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
   });
 }
 
@@ -105,8 +102,8 @@ class __$DataCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object movies = freezed,
-    Object hasReachedMax = freezed,
+    Object? movies = freezed,
+    Object? hasReachedMax = freezed,
   }) {
     return _then(_Data(
       movies == freezed ? _value.movies : movies as List<TMDBMovieBasic>,
@@ -117,9 +114,7 @@ class __$DataCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Data with DiagnosticableTreeMixin implements _Data {
-  const _$_Data(this.movies, this.hasReachedMax)
-      : assert(movies != null),
-        assert(hasReachedMax != null);
+  const _$_Data(this.movies, this.hasReachedMax);
 
   @override
   final List<TMDBMovieBasic> movies;
@@ -157,32 +152,30 @@ class _$_Data with DiagnosticableTreeMixin implements _Data {
       const DeepCollectionEquality().hash(movies) ^
       const DeepCollectionEquality().hash(hasReachedMax);
 
+  @JsonKey(ignore: true)
   @override
   _$DataCopyWith<_Data> get copyWith =>
       __$DataCopyWithImpl<_Data>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult data(List<TMDBMovieBasic> movies, bool hasReachedMax),
-    @required TResult dataLoading(List<TMDBMovieBasic> movies),
-    @required TResult error(String error),
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<TMDBMovieBasic> movies, bool hasReachedMax)
+        data,
+    required TResult Function(List<TMDBMovieBasic> movies) dataLoading,
+    required TResult Function(String error) error,
   }) {
-    assert(data != null);
-    assert(dataLoading != null);
-    assert(error != null);
     return data(movies, hasReachedMax);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult data(List<TMDBMovieBasic> movies, bool hasReachedMax),
-    TResult dataLoading(List<TMDBMovieBasic> movies),
-    TResult error(String error),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<TMDBMovieBasic> movies, bool hasReachedMax)? data,
+    TResult Function(List<TMDBMovieBasic> movies)? dataLoading,
+    TResult Function(String error)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (data != null) {
       return data(movies, hasReachedMax);
     }
@@ -191,26 +184,22 @@ class _$_Data with DiagnosticableTreeMixin implements _Data {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult data(_Data value),
-    @required TResult dataLoading(_DataLoading value),
-    @required TResult error(_Error value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Data value) data,
+    required TResult Function(_DataLoading value) dataLoading,
+    required TResult Function(_Error value) error,
   }) {
-    assert(data != null);
-    assert(dataLoading != null);
-    assert(error != null);
     return data(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult data(_Data value),
-    TResult dataLoading(_DataLoading value),
-    TResult error(_Error value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Data value)? data,
+    TResult Function(_DataLoading value)? dataLoading,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (data != null) {
       return data(this);
     }
@@ -224,6 +213,7 @@ abstract class _Data implements NowPlayingState {
 
   List<TMDBMovieBasic> get movies;
   bool get hasReachedMax;
+  @JsonKey(ignore: true)
   _$DataCopyWith<_Data> get copyWith;
 }
 
@@ -248,7 +238,7 @@ class __$DataLoadingCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object movies = freezed,
+    Object? movies = freezed,
   }) {
     return _then(_DataLoading(
       movies == freezed ? _value.movies : movies as List<TMDBMovieBasic>,
@@ -258,7 +248,7 @@ class __$DataLoadingCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_DataLoading with DiagnosticableTreeMixin implements _DataLoading {
-  const _$_DataLoading(this.movies) : assert(movies != null);
+  const _$_DataLoading(this.movies);
 
   @override
   final List<TMDBMovieBasic> movies;
@@ -288,32 +278,30 @@ class _$_DataLoading with DiagnosticableTreeMixin implements _DataLoading {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(movies);
 
+  @JsonKey(ignore: true)
   @override
   _$DataLoadingCopyWith<_DataLoading> get copyWith =>
       __$DataLoadingCopyWithImpl<_DataLoading>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult data(List<TMDBMovieBasic> movies, bool hasReachedMax),
-    @required TResult dataLoading(List<TMDBMovieBasic> movies),
-    @required TResult error(String error),
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<TMDBMovieBasic> movies, bool hasReachedMax)
+        data,
+    required TResult Function(List<TMDBMovieBasic> movies) dataLoading,
+    required TResult Function(String error) error,
   }) {
-    assert(data != null);
-    assert(dataLoading != null);
-    assert(error != null);
     return dataLoading(movies);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult data(List<TMDBMovieBasic> movies, bool hasReachedMax),
-    TResult dataLoading(List<TMDBMovieBasic> movies),
-    TResult error(String error),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<TMDBMovieBasic> movies, bool hasReachedMax)? data,
+    TResult Function(List<TMDBMovieBasic> movies)? dataLoading,
+    TResult Function(String error)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (dataLoading != null) {
       return dataLoading(movies);
     }
@@ -322,26 +310,22 @@ class _$_DataLoading with DiagnosticableTreeMixin implements _DataLoading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult data(_Data value),
-    @required TResult dataLoading(_DataLoading value),
-    @required TResult error(_Error value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Data value) data,
+    required TResult Function(_DataLoading value) dataLoading,
+    required TResult Function(_Error value) error,
   }) {
-    assert(data != null);
-    assert(dataLoading != null);
-    assert(error != null);
     return dataLoading(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult data(_Data value),
-    TResult dataLoading(_DataLoading value),
-    TResult error(_Error value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Data value)? data,
+    TResult Function(_DataLoading value)? dataLoading,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (dataLoading != null) {
       return dataLoading(this);
     }
@@ -353,6 +337,7 @@ abstract class _DataLoading implements NowPlayingState {
   const factory _DataLoading(List<TMDBMovieBasic> movies) = _$_DataLoading;
 
   List<TMDBMovieBasic> get movies;
+  @JsonKey(ignore: true)
   _$DataLoadingCopyWith<_DataLoading> get copyWith;
 }
 
@@ -374,7 +359,7 @@ class __$ErrorCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object error = freezed,
+    Object? error = freezed,
   }) {
     return _then(_Error(
       error == freezed ? _value.error : error as String,
@@ -384,7 +369,7 @@ class __$ErrorCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Error with DiagnosticableTreeMixin implements _Error {
-  const _$_Error(this.error) : assert(error != null);
+  const _$_Error(this.error);
 
   @override
   final String error;
@@ -414,32 +399,30 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
 
+  @JsonKey(ignore: true)
   @override
   _$ErrorCopyWith<_Error> get copyWith =>
       __$ErrorCopyWithImpl<_Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult data(List<TMDBMovieBasic> movies, bool hasReachedMax),
-    @required TResult dataLoading(List<TMDBMovieBasic> movies),
-    @required TResult error(String error),
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<TMDBMovieBasic> movies, bool hasReachedMax)
+        data,
+    required TResult Function(List<TMDBMovieBasic> movies) dataLoading,
+    required TResult Function(String error) error,
   }) {
-    assert(data != null);
-    assert(dataLoading != null);
-    assert(error != null);
     return error(this.error);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult data(List<TMDBMovieBasic> movies, bool hasReachedMax),
-    TResult dataLoading(List<TMDBMovieBasic> movies),
-    TResult error(String error),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<TMDBMovieBasic> movies, bool hasReachedMax)? data,
+    TResult Function(List<TMDBMovieBasic> movies)? dataLoading,
+    TResult Function(String error)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this.error);
     }
@@ -448,26 +431,22 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult data(_Data value),
-    @required TResult dataLoading(_DataLoading value),
-    @required TResult error(_Error value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Data value) data,
+    required TResult Function(_DataLoading value) dataLoading,
+    required TResult Function(_Error value) error,
   }) {
-    assert(data != null);
-    assert(dataLoading != null);
-    assert(error != null);
     return error(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult data(_Data value),
-    TResult dataLoading(_DataLoading value),
-    TResult error(_Error value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Data value)? data,
+    TResult Function(_DataLoading value)? dataLoading,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this);
     }
@@ -479,5 +458,6 @@ abstract class _Error implements NowPlayingState {
   const factory _Error(String error) = _$_Error;
 
   String get error;
+  @JsonKey(ignore: true)
   _$ErrorCopyWith<_Error> get copyWith;
 }
