@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AddProfileButton extends StatelessWidget {
-  const AddProfileButton({Key key, this.onPressed}) : super(key: key);
-  final VoidCallback onPressed;
+  const AddProfileButton({Key? key, this.onPressed}) : super(key: key);
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {

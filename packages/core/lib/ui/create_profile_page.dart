@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class CreateProfilePage extends StatefulWidget {
   const CreateProfilePage({
-    Key key,
+    Key? key,
     this.isLoading = false,
     this.errorText,
-    @required this.onSubmit,
+    required this.onSubmit,
   }) : super(key: key);
   final bool isLoading;
-  final String errorText;
+  final String? errorText;
   final Function(String) onSubmit;
 
   @override
