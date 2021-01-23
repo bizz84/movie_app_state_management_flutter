@@ -15,12 +15,12 @@ abstract class DataStore {
 
   /// Movies
   Future<void> setFavouriteMovie(
-      {@required String profileId,
-      @required TMDBMovieBasic movie,
-      @required bool isFavourite});
+      {required String profileId,
+      required TMDBMovieBasic movie,
+      required bool isFavourite});
   Stream<bool> favouriteMovie(
-      {@required String profileId, @required TMDBMovieBasic movie});
+      {required String profileId, required TMDBMovieBasic movie});
   Stream<List<TMDBMovieBasic>> allSavedMovies();
-  Stream<List<int>> favouriteMovieIDs({@required String profileId});
-  Stream<List<TMDBMovieBasic>> favouriteMovies({@required String profileId});
+  Stream<List<int>> favouriteMovieIDs({required String profileId});
+  Stream<List<TMDBMovieBasic>> favouriteMovies({required String profileId});
 }
