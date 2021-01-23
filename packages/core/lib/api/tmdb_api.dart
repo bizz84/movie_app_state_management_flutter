@@ -38,13 +38,13 @@ class TMDBApi {
   }
 
   static String imageUrl(String path, PosterSize size) {
-    return tmdbBaseImageUrl + _posterSizes[size] + path;
+    return tmdbBaseImageUrl + _posterSizes[size]! + path;
   }
 }
 
 // TODO: Convert to use DIO
 class TMDBClient {
-  Future<TMDBMoviesResponse> nowPlayingMovies({int page}) async {
+  Future<TMDBMoviesResponse> nowPlayingMovies({required int page}) async {
     final response = await http.get(TMDBApi.moviesNowPlaying(page));
     return TMDBMoviesResponse.fromJson(json.decode(response.body));
   }
