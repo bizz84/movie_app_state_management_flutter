@@ -11,8 +11,8 @@ abstract class TMDBMoviesResponse with _$TMDBMoviesResponse {
   factory TMDBMoviesResponse({
     required int page,
     required List<TMDBMovieBasic> results,
-    @JsonKey(name: 'total_results') int? totalResults,
-    @JsonKey(name: 'total_pages') int? totalPages,
+    @JsonKey(name: 'total_results') required int totalResults,
+    @JsonKey(name: 'total_pages') required int totalPages,
     @Default([]) List<String> errors,
   }) = _TMDBMoviesResponse;
 

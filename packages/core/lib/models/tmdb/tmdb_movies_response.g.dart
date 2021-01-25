@@ -13,8 +13,8 @@ _$_TMDBMoviesResponse _$_$_TMDBMoviesResponseFromJson(
     results: (json['results'] as List<dynamic>)
         .map((e) => TMDBMovieBasic.fromJson(e as Map<String, dynamic>))
         .toList(),
-    totalResults: json['total_results'] as int?,
-    totalPages: json['total_pages'] as int?,
+    totalResults: json['total_results'] as int,
+    totalPages: json['total_pages'] as int,
     errors:
         (json['errors'] as List<dynamic>?)?.map((e) => e as String).toList() ??
             [],

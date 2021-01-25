@@ -23,7 +23,7 @@ class _$TMDBMovieBasicTearOff {
       @JsonKey(name: 'vote_average') double? voteAverage,
       required String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') String? posterPath,
+      @JsonKey(name: 'poster_path') required String posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -68,7 +68,7 @@ mixin _$TMDBMovieBasic {
   String get title;
   double? get popularity;
   @JsonKey(name: 'poster_path')
-  String? get posterPath;
+  String get posterPath;
   @JsonKey(name: 'original_language')
   String? get originalLanguage;
   @JsonKey(name: 'original_title')
@@ -99,7 +99,7 @@ abstract class $TMDBMovieBasicCopyWith<$Res> {
       @JsonKey(name: 'vote_average') double? voteAverage,
       String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') String? posterPath,
+      @JsonKey(name: 'poster_path') String posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -145,7 +145,7 @@ class _$TMDBMovieBasicCopyWithImpl<$Res>
       popularity:
           popularity == freezed ? _value.popularity : popularity as double?,
       posterPath:
-          posterPath == freezed ? _value.posterPath : posterPath as String?,
+          posterPath == freezed ? _value.posterPath : posterPath as String,
       originalLanguage: originalLanguage == freezed
           ? _value.originalLanguage
           : originalLanguage as String?,
@@ -178,7 +178,7 @@ abstract class _$TMDBMovieBasicCopyWith<$Res>
       @JsonKey(name: 'vote_average') double? voteAverage,
       String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') String? posterPath,
+      @JsonKey(name: 'poster_path') String posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -226,7 +226,7 @@ class __$TMDBMovieBasicCopyWithImpl<$Res>
       popularity:
           popularity == freezed ? _value.popularity : popularity as double?,
       posterPath:
-          posterPath == freezed ? _value.posterPath : posterPath as String?,
+          posterPath == freezed ? _value.posterPath : posterPath as String,
       originalLanguage: originalLanguage == freezed
           ? _value.originalLanguage
           : originalLanguage as String?,
@@ -256,7 +256,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
       @JsonKey(name: 'vote_average') this.voteAverage,
       required this.title,
       this.popularity,
-      @JsonKey(name: 'poster_path') this.posterPath,
+      @JsonKey(name: 'poster_path') required this.posterPath,
       @JsonKey(name: 'original_language') this.originalLanguage,
       @JsonKey(name: 'original_title') this.originalTitle,
       @JsonKey(name: 'genre_ids') this.genreIds,
@@ -285,7 +285,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
   final double? popularity;
   @override
   @JsonKey(name: 'poster_path')
-  final String? posterPath;
+  final String posterPath;
   @override
   @JsonKey(name: 'original_language')
   final String? originalLanguage;
@@ -392,7 +392,7 @@ abstract class _TMDBMovieBasic implements TMDBMovieBasic {
       @JsonKey(name: 'vote_average') double? voteAverage,
       required String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') String? posterPath,
+      @JsonKey(name: 'poster_path') required String posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -420,7 +420,7 @@ abstract class _TMDBMovieBasic implements TMDBMovieBasic {
   double? get popularity;
   @override
   @JsonKey(name: 'poster_path')
-  String? get posterPath;
+  String get posterPath;
   @override
   @JsonKey(name: 'original_language')
   String? get originalLanguage;

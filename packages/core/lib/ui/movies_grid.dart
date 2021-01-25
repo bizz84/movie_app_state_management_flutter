@@ -28,7 +28,7 @@ class MoviesGrid extends StatelessWidget {
       itemBuilder: (context, index) {
         final movie = movies[index];
         return PosterTile(
-          imagePath: movie.posterPath!,
+          imagePath: movie.posterPath,
           //debugIndex: index,
           favouriteBuilder: favouriteBuilder != null
               ? (context) => favouriteBuilder!.call(context, movie)

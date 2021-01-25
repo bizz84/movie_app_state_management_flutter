@@ -19,8 +19,8 @@ class _$TMDBMoviesResponseTearOff {
   _TMDBMoviesResponse call(
       {required int page,
       required List<TMDBMovieBasic> results,
-      @JsonKey(name: 'total_results') int? totalResults,
-      @JsonKey(name: 'total_pages') int? totalPages,
+      @JsonKey(name: 'total_results') required int totalResults,
+      @JsonKey(name: 'total_pages') required int totalPages,
       List<String> errors = const []}) {
     return _TMDBMoviesResponse(
       page: page,
@@ -44,9 +44,9 @@ mixin _$TMDBMoviesResponse {
   int get page;
   List<TMDBMovieBasic> get results;
   @JsonKey(name: 'total_results')
-  int? get totalResults;
+  int get totalResults;
   @JsonKey(name: 'total_pages')
-  int? get totalPages;
+  int get totalPages;
   List<String> get errors;
 
   Map<String, dynamic> toJson();
@@ -62,8 +62,8 @@ abstract class $TMDBMoviesResponseCopyWith<$Res> {
   $Res call(
       {int page,
       List<TMDBMovieBasic> results,
-      @JsonKey(name: 'total_results') int? totalResults,
-      @JsonKey(name: 'total_pages') int? totalPages,
+      @JsonKey(name: 'total_results') int totalResults,
+      @JsonKey(name: 'total_pages') int totalPages,
       List<String> errors});
 }
 
@@ -89,9 +89,8 @@ class _$TMDBMoviesResponseCopyWithImpl<$Res>
       results:
           results == freezed ? _value.results : results as List<TMDBMovieBasic>,
       totalResults:
-          totalResults == freezed ? _value.totalResults : totalResults as int?,
-      totalPages:
-          totalPages == freezed ? _value.totalPages : totalPages as int?,
+          totalResults == freezed ? _value.totalResults : totalResults as int,
+      totalPages: totalPages == freezed ? _value.totalPages : totalPages as int,
       errors: errors == freezed ? _value.errors : errors as List<String>,
     ));
   }
@@ -107,8 +106,8 @@ abstract class _$TMDBMoviesResponseCopyWith<$Res>
   $Res call(
       {int page,
       List<TMDBMovieBasic> results,
-      @JsonKey(name: 'total_results') int? totalResults,
-      @JsonKey(name: 'total_pages') int? totalPages,
+      @JsonKey(name: 'total_results') int totalResults,
+      @JsonKey(name: 'total_pages') int totalPages,
       List<String> errors});
 }
 
@@ -136,9 +135,8 @@ class __$TMDBMoviesResponseCopyWithImpl<$Res>
       results:
           results == freezed ? _value.results : results as List<TMDBMovieBasic>,
       totalResults:
-          totalResults == freezed ? _value.totalResults : totalResults as int?,
-      totalPages:
-          totalPages == freezed ? _value.totalPages : totalPages as int?,
+          totalResults == freezed ? _value.totalResults : totalResults as int,
+      totalPages: totalPages == freezed ? _value.totalPages : totalPages as int,
       errors: errors == freezed ? _value.errors : errors as List<String>,
     ));
   }
@@ -151,8 +149,8 @@ class _$_TMDBMoviesResponse implements _TMDBMoviesResponse {
   _$_TMDBMoviesResponse(
       {required this.page,
       required this.results,
-      @JsonKey(name: 'total_results') this.totalResults,
-      @JsonKey(name: 'total_pages') this.totalPages,
+      @JsonKey(name: 'total_results') required this.totalResults,
+      @JsonKey(name: 'total_pages') required this.totalPages,
       this.errors = const []});
 
   factory _$_TMDBMoviesResponse.fromJson(Map<String, dynamic> json) =>
@@ -164,10 +162,10 @@ class _$_TMDBMoviesResponse implements _TMDBMoviesResponse {
   final List<TMDBMovieBasic> results;
   @override
   @JsonKey(name: 'total_results')
-  final int? totalResults;
+  final int totalResults;
   @override
   @JsonKey(name: 'total_pages')
-  final int? totalPages;
+  final int totalPages;
   @JsonKey(defaultValue: const [])
   @override
   final List<String> errors;
@@ -220,8 +218,8 @@ abstract class _TMDBMoviesResponse implements TMDBMoviesResponse {
   factory _TMDBMoviesResponse(
       {required int page,
       required List<TMDBMovieBasic> results,
-      @JsonKey(name: 'total_results') int? totalResults,
-      @JsonKey(name: 'total_pages') int? totalPages,
+      @JsonKey(name: 'total_results') required int totalResults,
+      @JsonKey(name: 'total_pages') required int totalPages,
       List<String> errors}) = _$_TMDBMoviesResponse;
 
   factory _TMDBMoviesResponse.fromJson(Map<String, dynamic> json) =
@@ -233,10 +231,10 @@ abstract class _TMDBMoviesResponse implements TMDBMoviesResponse {
   List<TMDBMovieBasic> get results;
   @override
   @JsonKey(name: 'total_results')
-  int? get totalResults;
+  int get totalResults;
   @override
   @JsonKey(name: 'total_pages')
-  int? get totalPages;
+  int get totalPages;
   @override
   List<String> get errors;
   @override
