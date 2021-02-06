@@ -5,7 +5,7 @@ author: null
 homepage: null
 
 environment:
-  sdk: ">=2.12.0-133.2.beta <3.0.0"
+  sdk: ">=2.12.0-0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
