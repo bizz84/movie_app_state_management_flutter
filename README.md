@@ -10,6 +10,8 @@ The project uses the [TMDB API](https://www.themoviedb.org/documentation/api) to
 
 Before running, see instructions on how to [get a TMDB API key](#getting-a-tmdb-api-key).
 
+Also, make sure to run on **Flutter beta** channel.
+
 ## App Overview
 
 The application is composed by three primary screens: **Now Playing**, **Favourites** and **Profiles**.
