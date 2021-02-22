@@ -31,14 +31,14 @@ class FavouritesMovieGrid extends ConsumerWidget {
       favouriteBuilder: (context, movie) {
         return Consumer(
           builder: (_, watch, __) {
-            final dataStore = watch(dataStoreProvider);
-            final profilesData = watch(profilesDataProvider);
             final favouriteMovie = watch(favouriteMovieProvider(movie));
             return favouriteMovie.when(
               data: (isFavourite) => FavouriteButton(
                 isFavourite: isFavourite,
                 onFavouriteChanged: (isFavourite) {
+                  final profilesData = context.read(profilesDataProvider);
                   if (profilesData?.selectedId != null) {
+                    final dataStore = context.read(dataStoreProvider);
                     dataStore.setFavouriteMovie(
                       profileId: profilesData.selectedId,
                       movie: movie,
