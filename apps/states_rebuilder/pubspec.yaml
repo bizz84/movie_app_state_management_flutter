@@ -28,7 +28,7 @@ dependencies:
   core:
     path: ../../packages/core
   uuid: ^2.2.2
-  states_rebuilder: ^4.0.0-nullsafety.1
+  states_rebuilder: ^4.0.0+1
 
 dev_dependencies:
   flutter_test:
