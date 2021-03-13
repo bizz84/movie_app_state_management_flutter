@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
 import 'app/app_startup/app_startup_page.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       // Initialize plugins
       waiteFor: () => [dataStoreInject.stateAsync],
       onWaiting: () => SplashScreen(),
+      onError: (err, refresh) => OnErrorWidget(error: err, refresh: refresh),
       builder: (context) => MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
@@ -34,6 +36,27 @@ class SplashScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Container(),
+      ),
+    );
+  }
+}
+
+class OnErrorWidget extends StatelessWidget {
+  final dynamic error;
+  final VoidCallback refresh;
+
+  const OnErrorWidget({Key key, this.error, this.refresh}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: error is MissingPluginException
+            ? Center(child: Text('Unsupported platform'))
+            : ElevatedButton.icon(
+                onPressed: refresh,
+                icon: Icon(Icons.refresh),
+                label: Text('${error.message}'),
+              ),
       ),
     );
   }
