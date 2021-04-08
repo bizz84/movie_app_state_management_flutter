@@ -5,8 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_app_demo_flutter/top_level_providers.dart';
 
-final AutoDisposeStreamProviderFamily<bool, TMDBMovieBasic>?
-    favouriteMovieProvider =
+final favouriteMovieProvider =
     StreamProvider.autoDispose.family<bool, TMDBMovieBasic>((ref, movie) {
   final dataStore = ref.watch(dataStoreProvider);
   final profilesData = ref.watch(profilesDataProvider);
@@ -32,14 +31,14 @@ class FavouritesMovieGrid extends ConsumerWidget {
       favouriteBuilder: (context, movie) {
         return Consumer(
           builder: (_, watch, __) {
-            final favouriteMovie = watch(favouriteMovieProvider!(movie));
+            final favouriteMovie = watch(favouriteMovieProvider(movie));
             return favouriteMovie.when(
               data: (isFavourite) => FavouriteButton(
                 isFavourite: isFavourite,
                 onFavouriteChanged: (isFavourite) {
                   final profilesData = watch(profilesDataProvider);
                   if (profilesData.selectedId != null) {
-                    final dataStore = watch(dataStoreProvider);
+                    final dataStore = context.read(dataStoreProvider);
                     dataStore.setFavouriteMovie(
                       profileId: profilesData.selectedId!,
                       movie: movie,
