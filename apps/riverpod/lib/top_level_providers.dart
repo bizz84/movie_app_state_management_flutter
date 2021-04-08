@@ -16,7 +16,7 @@ final appStartupModelProvider =
 final profilesDataProvider = Provider<ProfilesData>((ref) {
   final state = ref.watch(appStartupModelProvider);
   return state.when(
-      initializing: () => null,
+      initializing: () => ProfilesData(),
       needsProfile: () => ProfilesData(),
       profileLoaded: (profilesData) => profilesData);
 });

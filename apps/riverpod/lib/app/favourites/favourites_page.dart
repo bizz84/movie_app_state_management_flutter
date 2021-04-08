@@ -5,17 +5,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_app_demo_flutter/top_level_providers.dart';
 
-final profileFavouriteMoviesProvider =
+final AutoDisposeStreamProvider<List<TMDBMovieBasic>>?
+    profileFavouriteMoviesProvider =
     StreamProvider.autoDispose<List<TMDBMovieBasic>>((ref) {
   final dataStore = ref.watch(dataStoreProvider);
   final profilesData = ref.watch(profilesDataProvider);
-  return dataStore.favouriteMovies(profileId: profilesData?.selectedId);
+  if (profilesData.selectedId != null) {
+    return dataStore.favouriteMovies(profileId: profilesData.selectedId!);
+  } else {
+    throw UnimplementedError();
+  }
 });
 
 class FavouritesPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ScopedReader watch) {
-    final profileFavouriteMovies = watch(profileFavouriteMoviesProvider);
+    final profileFavouriteMovies = watch(profileFavouriteMoviesProvider!);
     return profileFavouriteMovies.when(
       data: (movies) => ScrollableMoviesPageBuilder(
         title: 'Favourites',

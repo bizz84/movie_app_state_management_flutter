@@ -7,7 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
 
 class CreateProfileModel extends StateNotifier<CreateProfileState> {
-  CreateProfileModel({@required this.dataStore})
+  CreateProfileModel({required this.dataStore})
       : super(const CreateProfileState.noError());
   final DataStore dataStore;
 

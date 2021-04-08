@@ -5,20 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_app_demo_flutter/top_level_providers.dart';
 
-final favouriteMovieProvider =
+final AutoDisposeStreamProviderFamily<bool, TMDBMovieBasic>?
+    favouriteMovieProvider =
     StreamProvider.autoDispose.family<bool, TMDBMovieBasic>((ref, movie) {
   final dataStore = ref.watch(dataStoreProvider);
   final profilesData = ref.watch(profilesDataProvider);
-  if (profilesData?.selectedId != null) {
+  if (profilesData.selectedId != null) {
     return dataStore.favouriteMovie(
-        profileId: profilesData.selectedId, movie: movie);
+        profileId: profilesData.selectedId!, movie: movie);
   }
   return Stream.empty();
 });
 
 class FavouritesMovieGrid extends ConsumerWidget {
   const FavouritesMovieGrid(
-      {Key key, @required this.movies, @required this.controller})
+      {Key? key, required this.movies, required this.controller})
       : super(key: key);
   final List<TMDBMovieBasic> movies;
   final ScrollController controller;
@@ -31,16 +32,16 @@ class FavouritesMovieGrid extends ConsumerWidget {
       favouriteBuilder: (context, movie) {
         return Consumer(
           builder: (_, watch, __) {
-            final dataStore = watch(dataStoreProvider);
-            final profilesData = watch(profilesDataProvider);
-            final favouriteMovie = watch(favouriteMovieProvider(movie));
+            final favouriteMovie = watch(favouriteMovieProvider!(movie));
             return favouriteMovie.when(
               data: (isFavourite) => FavouriteButton(
                 isFavourite: isFavourite,
                 onFavouriteChanged: (isFavourite) {
-                  if (profilesData?.selectedId != null) {
+                  final profilesData = watch(profilesDataProvider);
+                  if (profilesData.selectedId != null) {
+                    final dataStore = watch(dataStoreProvider);
                     dataStore.setFavouriteMovie(
-                      profileId: profilesData.selectedId,
+                      profileId: profilesData.selectedId!,
                       movie: movie,
                       isFavourite: isFavourite,
                     );
