@@ -1,4 +1,4 @@
-# Flutter State Management: Movie App with Provider, Riverpod, flutter_bloc 
+# Flutter State Management: Movie App with Provider, Riverpod, flutter_bloc & more
 
 This reference project shows how to implement a (Netflix-inspired) movie app with different state management techniques in Flutter:
 
@@ -88,6 +88,7 @@ The current state management solutions are currently supported:
 - [x] [Provider](https://pub.dev/packages/provider) (using `StateNotifier`)
 - [x] [flutter_bloc](https://pub.dev/packages/flutter_bloc) (using `Cubit`)
 - [x] [Riverpod](https://pub.dev/packages/riverpod) (using `StateNotifier`)
+- [x] [States Rebuilder](https://pub.dev/packages/states_rebuilder)
 
 I plan to add more in the future (PRs welcome!).
 
