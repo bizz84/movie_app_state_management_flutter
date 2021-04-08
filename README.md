@@ -94,7 +94,6 @@ I plan to add more in the future (PRs welcome!).
 
 ## Future Roadmap
 
-- Convert project to null safety (once the Freezed package supports this).
 - Add more screens
 - Polish the UI
 - Replace `http` with `dio` to support request cancellation
