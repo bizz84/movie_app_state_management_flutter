@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:sembast/sembast.dart';
@@ -179,13 +178,10 @@ class SembastDataStore implements DataStore {
   // and introduces an extra dependency (RxDart). But it's better than copy-pasting
   // this code in all the apps.
   Stream<List<TMDBMovieBasic>> favouriteMovies({required String profileId}) {
-    //if (profileId != null) {
     return Rx.combineLatest2(
         allSavedMovies(), favouriteMovieIDs(profileId: profileId),
         (List<TMDBMovieBasic> movies, List<int> favourites) {
       return movies.where((movie) => favourites.contains(movie.id)).toList();
     });
-    //}
-    //return Stream.empty();
   }
 }

@@ -24,11 +24,14 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
       appBar: AppBar(
         title: const Text('Create Profile'),
         actions: [
-          FlatButton(
+          TextButton(
             onPressed: widget.isLoading
                 ? null
                 : () => widget.onSubmit(controller.value.text),
-            child: const Text('Save'),
+            child: const Text(
+              'Save',
+              style: TextStyle(color: Colors.white),
+            ),
           )
         ],
       ),
