@@ -25,15 +25,13 @@ dependencies:
     sdk: flutter
   core:
     path: ../../packages/core
-  cupertino_icons: ^1.0.1
-  flutter_riverpod: ^0.12.1
-  path_provider: ^1.6.24
-  uuid: ^2.2.2
+  cupertino_icons: ^1.0.2
+  flutter_riverpod: ^0.14.0+1
+  path_provider: ^2.0.1
+  uuid: ^3.0.4
 
 dev_dependencies:
   flutter_test:
-    sdk: flutter
-  integration_test:
     sdk: flutter
 
 # For information on the generic Dart part of this file, see the
