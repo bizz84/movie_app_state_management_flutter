@@ -27,14 +27,19 @@ Map<PosterSize, String> _posterSizes = {
 };
 
 class TMDBApi {
-  static String tmdbBaseUrl = "https://api.themoviedb.org/3";
   static String tmdbBaseImageUrl = "http://image.tmdb.org/t/p/";
 
-  static String moviesNowPlaying(int page) {
-    return '$tmdbBaseUrl'
-        '/movie/now_playing?api_key='
-        '$tmdbApiKey'
-        '&include_adult=false&page=$page';
+  static Uri moviesNowPlaying(int page) {
+    return Uri(
+      scheme: 'https',
+      host: 'api.themoviedb.org',
+      path: '3/movie/now_playing',
+      queryParameters: {
+        'api_key': tmdbApiKey,
+        'include_adult': 'false',
+        'page': '$page',
+      },
+    );
   }
 
   static String imageUrl(String path, PosterSize size) {
