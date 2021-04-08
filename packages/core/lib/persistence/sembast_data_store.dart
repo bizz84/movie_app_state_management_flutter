@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:sembast/sembast.dart';
@@ -45,7 +44,7 @@ class SembastDataStore implements DataStore {
 
   Future<void> createProfile(Profile profile) async {
     final recordName = StorePath.profiles;
-    final profilesJson = await store.record(recordName).get(db) as String;
+    final profilesJson = await store.record(recordName).get(db) as String?;
     if (profilesJson != null) {
       final profilesData = ProfilesData.fromJson(profilesJson);
       profilesData.profiles[profile.id] = profile;
@@ -60,7 +59,7 @@ class SembastDataStore implements DataStore {
 
   Future<void> setSelectedProfile(Profile profile) async {
     final recordName = StorePath.profiles;
-    final profilesJson = await store.record(recordName).get(db) as String;
+    final profilesJson = await store.record(recordName).get(db) as String?;
     if (profilesJson != null) {
       final profilesData = ProfilesData.fromJson(profilesJson);
       if (profilesData.profiles[profile.id] != null) {
@@ -74,14 +73,14 @@ class SembastDataStore implements DataStore {
 
   Stream<ProfilesData> profilesData() {
     final record = store.record(StorePath.profiles);
-    return record.onSnapshot(db).map((snapshot) => snapshot?.value != null
-        ? ProfilesData.fromJson(snapshot.value)
-        : ProfilesData());
+    return record
+        .onSnapshot(db)
+        .map((snapshot) => ProfilesData.fromJson(snapshot?.value));
   }
 
   Future<ProfilesData> getProfilesData() async {
     final profilesJson =
-        await store.record(StorePath.profiles).get(db) as String;
+        await store.record(StorePath.profiles).get(db) as String?;
     return profilesJson != null
         ? ProfilesData.fromJson(profilesJson)
         : ProfilesData();
@@ -89,9 +88,6 @@ class SembastDataStore implements DataStore {
 
   Future<bool> profileExistsWithName(String name) async {
     final profiles = await getProfilesData();
-    if (profiles == null) {
-      return false;
-    }
     final allNames =
         profiles.profiles.values.map((profile) => profile.name).toList();
     return allNames.contains(name);
@@ -100,9 +96,9 @@ class SembastDataStore implements DataStore {
   /// Movies methods
 
   Future<void> setFavouriteMovie(
-      {@required String profileId,
-      @required TMDBMovieBasic movie,
-      @required bool isFavourite}) async {
+      {required String profileId,
+      required TMDBMovieBasic movie,
+      required bool isFavourite}) async {
     // record used to show favourite flag (per-movie)
     await store
         .record(StorePath.favouriteMovie(profileId, movie.id))
@@ -111,7 +107,7 @@ class SembastDataStore implements DataStore {
     await _storeMovie(movie);
     // record used to show all favourites (all movies)
     final recordName = StorePath.favouriteMovies(profileId);
-    final favouritesJson = await store.record(recordName).get(db) as String;
+    final favouritesJson = await store.record(recordName).get(db) as String?;
     if (favouritesJson != null) {
       final favouriteMovies = FavouriteMovies.fromJson(favouritesJson);
       if (isFavourite) {
@@ -135,7 +131,7 @@ class SembastDataStore implements DataStore {
 
   Future<void> _storeMovie(TMDBMovieBasic movie) async {
     final recordName = StorePath.movies;
-    final moviesJson = await store.record(recordName).get(db) as String;
+    final moviesJson = await store.record(recordName).get(db) as String?;
     if (moviesJson != null) {
       final moviesData = MoviesData.fromJson(moviesJson);
       // only save movie to store if it hasn't been saved before
@@ -150,18 +146,17 @@ class SembastDataStore implements DataStore {
   }
 
   Stream<bool> favouriteMovie(
-      {@required String profileId, @required TMDBMovieBasic movie}) {
+      {required String profileId, required TMDBMovieBasic movie}) {
     final record = store.record(StorePath.favouriteMovie(profileId, movie.id));
-    return record
-        .onSnapshot(db)
-        .map((snapshot) => snapshot?.value != null ? snapshot.value : false);
+    return record.onSnapshot(db).map((snapshot) => snapshot?.value ?? false);
   }
 
   Stream<List<TMDBMovieBasic>> allSavedMovies() {
     final moviesRecord = store.record(StorePath.movies);
     return moviesRecord.onSnapshot(db).map((snapshot) {
-      if (snapshot?.value != null) {
-        final moviesData = MoviesData.fromJson(snapshot.value);
+      final value = snapshot?.value;
+      if (value != null) {
+        final moviesData = MoviesData.fromJson(value);
         return moviesData.movies.values.toList();
       } else {
         return [];
@@ -169,24 +164,24 @@ class SembastDataStore implements DataStore {
     });
   }
 
-  Stream<List<int>> favouriteMovieIDs({@required String profileId}) {
+  Stream<List<int>> favouriteMovieIDs({required String profileId}) {
     final record = store.record(StorePath.favouriteMovies(profileId));
-    return record.onSnapshot(db).map((snapshot) => snapshot?.value != null
-        ? FavouriteMovies.fromJson(snapshot.value).favouriteIDs.toList()
-        : []);
+    return record.onSnapshot(db).map((snapshot) {
+      final value = snapshot?.value;
+      return value != null
+          ? FavouriteMovies.fromJson(value).favouriteIDs.toList()
+          : [];
+    });
   }
 
   // Technically this should not belong to this class as it only combines streams
   // and introduces an extra dependency (RxDart). But it's better than copy-pasting
   // this code in all the apps.
-  Stream<List<TMDBMovieBasic>> favouriteMovies({@required String profileId}) {
-    if (profileId != null) {
-      return Rx.combineLatest2(
-          allSavedMovies(), favouriteMovieIDs(profileId: profileId),
-          (List<TMDBMovieBasic> movies, List<int> favourites) {
-        return movies.where((movie) => favourites.contains(movie.id)).toList();
-      });
-    }
-    return Stream.empty();
+  Stream<List<TMDBMovieBasic>> favouriteMovies({required String profileId}) {
+    return Rx.combineLatest2(
+        allSavedMovies(), favouriteMovieIDs(profileId: profileId),
+        (List<TMDBMovieBasic> movies, List<int> favourites) {
+      return movies.where((movie) => favourites.contains(movie.id)).toList();
+    });
   }
 }

@@ -1,17 +1,16 @@
 import 'dart:async';
 
 import 'package:core/persistence/data_store.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:core/models/app_state/app_startup_state.dart';
 
 class AppStartupCubit extends Cubit<AppStartupState> {
-  AppStartupCubit({@required this.dataStore})
+  AppStartupCubit({required this.dataStore})
       : super(const AppStartupState.initializing()) {
     init();
   }
   final DataStore dataStore;
-  StreamSubscription _subscription;
+  StreamSubscription? _subscription;
 
   @override
   Future<void> close() {

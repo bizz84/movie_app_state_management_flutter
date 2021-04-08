@@ -9,16 +9,16 @@ final favouriteMovieProvider =
     StreamProvider.autoDispose.family<bool, TMDBMovieBasic>((ref, movie) {
   final dataStore = ref.watch(dataStoreProvider);
   final profilesData = ref.watch(profilesDataProvider);
-  if (profilesData?.selectedId != null) {
+  if (profilesData.selectedId != null) {
     return dataStore.favouriteMovie(
-        profileId: profilesData.selectedId, movie: movie);
+        profileId: profilesData.selectedId!, movie: movie);
   }
   return Stream.empty();
 });
 
 class FavouritesMovieGrid extends ConsumerWidget {
   const FavouritesMovieGrid(
-      {Key key, @required this.movies, @required this.controller})
+      {Key? key, required this.movies, required this.controller})
       : super(key: key);
   final List<TMDBMovieBasic> movies;
   final ScrollController controller;
@@ -36,11 +36,11 @@ class FavouritesMovieGrid extends ConsumerWidget {
               data: (isFavourite) => FavouriteButton(
                 isFavourite: isFavourite,
                 onFavouriteChanged: (isFavourite) {
-                  final profilesData = context.read(profilesDataProvider);
-                  if (profilesData?.selectedId != null) {
+                  final profilesData = watch(profilesDataProvider);
+                  if (profilesData.selectedId != null) {
                     final dataStore = context.read(dataStoreProvider);
                     dataStore.setFavouriteMovie(
-                      profileId: profilesData.selectedId,
+                      profileId: profilesData.selectedId!,
                       movie: movie,
                       isFavourite: isFavourite,
                     );

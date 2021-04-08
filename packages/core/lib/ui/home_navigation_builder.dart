@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 enum TabItem { nowPlaying, favourites, profiles }
 
 class HomeNavigationBuilder extends StatefulWidget {
-  const HomeNavigationBuilder({Key key, this.builder}) : super(key: key);
+  const HomeNavigationBuilder({Key? key, required this.builder})
+      : super(key: key);
   final Widget Function(BuildContext, TabItem) builder;
 
   @override
@@ -27,8 +28,7 @@ class _HomeNavigationBuilderState extends State<HomeNavigationBuilder> {
 }
 
 class BottomNavigation extends StatelessWidget {
-  const BottomNavigation(
-      {@required this.currentTab, @required this.onSelectTab});
+  const BottomNavigation({required this.currentTab, required this.onSelectTab});
   final TabItem currentTab;
   final ValueChanged<TabItem> onSelectTab;
 

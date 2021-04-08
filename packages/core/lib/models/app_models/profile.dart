@@ -12,20 +12,17 @@
 
 import 'dart:convert';
 
-import 'package:collection/collection.dart';
-import 'package:flutter/foundation.dart';
-
 class Profile {
   final String id;
   final String name;
   Profile({
-    @required this.id,
-    @required this.name,
+    required this.id,
+    required this.name,
   });
 
   Profile copyWith({
-    String id,
-    String name,
+    String? id,
+    String? name,
   }) {
     return Profile(
       id: id ?? this.id,
@@ -41,11 +38,9 @@ class Profile {
   }
 
   factory Profile.fromMap(Map<String, dynamic> map) {
-    if (map == null) return null;
-
     return Profile(
-      id: map['id'],
-      name: map['name'],
+      id: map['id']!,
+      name: map['name']!,
     );
   }
 

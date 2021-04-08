@@ -5,14 +5,14 @@ import '../ui/poster_tile.dart';
 // TODO: Add favourite button builder
 class MoviesGrid extends StatelessWidget {
   const MoviesGrid({
-    Key key,
-    @required this.movies,
+    Key? key,
+    required this.movies,
     this.controller,
     this.favouriteBuilder,
   }) : super(key: key);
   final List<TMDBMovieBasic> movies;
-  final ScrollController controller;
-  final Widget Function(BuildContext, TMDBMovieBasic) favouriteBuilder;
+  final ScrollController? controller;
+  final Widget Function(BuildContext, TMDBMovieBasic)? favouriteBuilder;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class MoviesGrid extends StatelessWidget {
           imagePath: movie.posterPath,
           //debugIndex: index,
           favouriteBuilder: favouriteBuilder != null
-              ? (context) => favouriteBuilder(context, movie)
+              ? (context) => favouriteBuilder!.call(context, movie)
               : null,
         );
       },

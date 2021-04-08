@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class ScrollableMoviesPageBuilder extends StatefulWidget {
   const ScrollableMoviesPageBuilder(
-      {Key key,
-      @required this.title,
-      @required this.builder,
+      {Key? key,
+      required this.title,
+      required this.builder,
       this.onNextPageRequested})
       : super(key: key);
   final String title;
   final Function(BuildContext, ScrollController) builder;
-  final VoidCallback onNextPageRequested;
+  final VoidCallback? onNextPageRequested;
 
   @override
   _ScrollableMoviesPageBuilderState createState() =>

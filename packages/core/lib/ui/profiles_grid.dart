@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 
 class ProfilesGrid extends StatelessWidget {
   const ProfilesGrid(
-      {Key key,
-      @required this.profilesData,
+      {Key? key,
+      required this.profilesData,
       this.onSelectedProfile,
       this.onAddProfile})
       : super(key: key);
   final ProfilesData profilesData;
-  final ValueChanged<Profile> onSelectedProfile;
-  final VoidCallback onAddProfile;
+  final ValueChanged<Profile>? onSelectedProfile;
+  final VoidCallback? onAddProfile;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class ProfilesGrid extends StatelessWidget {
             return ProfileGridItem(
               profile: profile,
               selected: profilesData.selectedId == profile.id,
-              onPressed: () => onSelectedProfile(profile),
+              onPressed: () => onSelectedProfile?.call(profile),
             );
           }
           return AddProfileButton(

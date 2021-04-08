@@ -12,7 +12,7 @@ import 'package:movie_app_demo_flutter/top_level_providers.dart';
 class AppStartupPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ScopedReader watch) {
-    final state = watch(appStartupModelProvider.state);
+    final state = watch(appStartupModelProvider);
     return state.when(
       initializing: () => const Center(child: CircularProgressIndicator()),
       needsProfile: () => ProfileSelectionPage(),

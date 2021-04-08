@@ -5,14 +5,14 @@ import 'package:transparent_image/transparent_image.dart';
 // TODO: Add Favourite Button builder
 class PosterTile extends StatelessWidget {
   const PosterTile({
-    @required this.imagePath,
+    required this.imagePath,
     // debugging hint to show the tile index
     this.debugIndex,
     this.favouriteBuilder,
   });
   final String imagePath;
-  final int debugIndex;
-  final WidgetBuilder favouriteBuilder;
+  final int? debugIndex;
+  final WidgetBuilder? favouriteBuilder;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class PosterTile extends StatelessWidget {
           Positioned(
             right: 0,
             top: 0,
-            child: favouriteBuilder(context),
+            child: favouriteBuilder!(context),
           ),
       ],
     );
@@ -62,18 +62,18 @@ class TopGradient extends StatelessWidget {
 }
 
 class _Poster extends StatelessWidget {
-  const _Poster({@required this.imagePath});
+  const _Poster({required this.imagePath});
   final String imagePath;
 
   @override
   Widget build(BuildContext context) {
-    if (imagePath != null) {
-      return FadeInImage.memoryNetwork(
-        placeholder: kTransparentImage,
-        image: TMDBApi.imageUrl(imagePath, PosterSize.w154),
-        fit: BoxFit.fitWidth,
-      );
-    }
-    return Image.memory(kTransparentImage);
+    //if (imagePath != null) {
+    return FadeInImage.memoryNetwork(
+      placeholder: kTransparentImage,
+      image: TMDBApi.imageUrl(imagePath, PosterSize.w154),
+      fit: BoxFit.fitWidth,
+    );
+    //}
+    //return Image.memory(kTransparentImage);
   }
 }

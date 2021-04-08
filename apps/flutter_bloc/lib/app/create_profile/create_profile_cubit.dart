@@ -7,7 +7,7 @@ import 'package:core/models/app_state/create_profile_state.dart';
 import 'package:uuid/uuid.dart';
 
 class CreateProfileCubit extends Cubit<CreateProfileState> {
-  CreateProfileCubit({@required this.dataStore})
+  CreateProfileCubit({required this.dataStore})
       : super(const CreateProfileState.noError());
   final DataStore dataStore;
 
@@ -21,7 +21,7 @@ class CreateProfileCubit extends Cubit<CreateProfileState> {
       emit(const CreateProfileState.error('Name already taken'));
       return false;
     }
-    final id = Uuid().v1();
+    final id = const Uuid().v1();
     emit(const CreateProfileState.loading());
     try {
       await dataStore.createProfile(Profile(name: name, id: id));

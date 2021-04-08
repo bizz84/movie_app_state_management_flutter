@@ -10,14 +10,14 @@ _$_TMDBMoviesResponse _$_$_TMDBMoviesResponseFromJson(
     Map<String, dynamic> json) {
   return _$_TMDBMoviesResponse(
     page: json['page'] as int,
-    results: (json['results'] as List)
-        ?.map((e) => e == null
-            ? null
-            : TMDBMovieBasic.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    results: (json['results'] as List<dynamic>)
+        .map((e) => TMDBMovieBasic.fromJson(e as Map<String, dynamic>))
+        .toList(),
     totalResults: json['total_results'] as int,
     totalPages: json['total_pages'] as int,
-    errors: (json['errors'] as List)?.map((e) => e as String)?.toList(),
+    errors:
+        (json['errors'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+            [],
   );
 }
 

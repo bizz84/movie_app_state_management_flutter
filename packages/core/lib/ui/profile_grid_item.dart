@@ -3,14 +3,11 @@ import '../models/app_models/profile.dart';
 
 class ProfileGridItem extends StatelessWidget {
   const ProfileGridItem(
-      {Key key,
-      @required this.profile,
-      @required this.selected,
-      this.onPressed})
+      {Key? key, required this.profile, required this.selected, this.onPressed})
       : super(key: key);
   final Profile profile;
   final bool selected;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +28,7 @@ class ProfileGridItem extends StatelessWidget {
 }
 
 class ProfileFaceBox extends StatelessWidget {
-  const ProfileFaceBox({Key key, @required this.selected}) : super(key: key);
+  const ProfileFaceBox({Key? key, required this.selected}) : super(key: key);
   final bool selected;
 
   @override
@@ -42,7 +39,7 @@ class ProfileFaceBox extends StatelessWidget {
         gradient: LinearGradient(
           colors: [
             Colors.indigo,
-            Colors.indigo[700],
+            Colors.indigo[700]!,
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,

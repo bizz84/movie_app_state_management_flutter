@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class CreateProfilePage extends StatefulWidget {
   const CreateProfilePage({
-    Key key,
+    Key? key,
     this.isLoading = false,
     this.errorText,
-    @required this.onSubmit,
+    required this.onSubmit,
   }) : super(key: key);
   final bool isLoading;
-  final String errorText;
+  final String? errorText;
   final Function(String) onSubmit;
 
   @override
@@ -24,11 +24,14 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
       appBar: AppBar(
         title: const Text('Create Profile'),
         actions: [
-          FlatButton(
+          TextButton(
             onPressed: widget.isLoading
                 ? null
                 : () => widget.onSubmit(controller.value.text),
-            child: const Text('Save'),
+            child: const Text(
+              'Save',
+              style: TextStyle(color: Colors.white),
+            ),
           )
         ],
       ),
