@@ -12,14 +12,14 @@ class FavouritesPage extends StatelessWidget {
     final dataStore = Provider.of<DataStore>(context);
     final profilesData = Provider.of<ProfilesData>(context);
     return StreamBuilder<List<TMDBMovieBasic>>(
-      stream: dataStore.favouriteMovies(profileId: profilesData?.selectedId),
+      stream: dataStore.favouriteMovies(profileId: profilesData.selectedId!),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.active) {
           if (snapshot.hasData) {
             final movies = snapshot.data;
             return ScrollableMoviesPageBuilder(
               title: 'Favourites',
-              builder: (_, __) => MoviesGrid(movies: movies),
+              builder: (_, __) => MoviesGrid(movies: movies!),
             );
           } else {
             return Container();

@@ -1,13 +1,11 @@
 import 'package:core/models/app_models/profile.dart';
 import 'package:core/persistence/data_store.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:core/models/app_state/create_profile_state.dart';
 import 'package:uuid/uuid.dart';
 import 'package:state_notifier/state_notifier.dart';
 
 class CreateProfileModel extends StateNotifier<CreateProfileState> {
-  CreateProfileModel({@required this.dataStore})
+  CreateProfileModel({required this.dataStore})
       : super(const CreateProfileState.noError());
   final DataStore dataStore;
 
@@ -21,7 +19,7 @@ class CreateProfileModel extends StateNotifier<CreateProfileState> {
       state = const CreateProfileState.error('Name already taken');
       return false;
     }
-    final id = Uuid().v1();
+    final id = const Uuid().v1();
     state = const CreateProfileState.loading();
     try {
       await dataStore.createProfile(Profile(name: name, id: id));
