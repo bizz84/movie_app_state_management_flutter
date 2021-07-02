@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of core;
 
@@ -8,6 +8,10 @@ part of core;
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TMDBMoviesResponse _$TMDBMoviesResponseFromJson(Map<String, dynamic> json) {
   return _TMDBMoviesResponse.fromJson(json);
 }
@@ -41,17 +45,18 @@ const $TMDBMoviesResponse = _$TMDBMoviesResponseTearOff();
 
 /// @nodoc
 mixin _$TMDBMoviesResponse {
-  int get page;
-  List<TMDBMovieBasic> get results;
+  int get page => throw _privateConstructorUsedError;
+  List<TMDBMovieBasic> get results => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_results')
-  int get totalResults;
+  int get totalResults => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_pages')
-  int get totalPages;
-  List<String> get errors;
+  int get totalPages => throw _privateConstructorUsedError;
+  List<String> get errors => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TMDBMoviesResponseCopyWith<TMDBMoviesResponse> get copyWith;
+  $TMDBMoviesResponseCopyWith<TMDBMoviesResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -85,13 +90,26 @@ class _$TMDBMoviesResponseCopyWithImpl<$Res>
     Object? errors = freezed,
   }) {
     return _then(_value.copyWith(
-      page: page == freezed ? _value.page : page as int,
-      results:
-          results == freezed ? _value.results : results as List<TMDBMovieBasic>,
-      totalResults:
-          totalResults == freezed ? _value.totalResults : totalResults as int,
-      totalPages: totalPages == freezed ? _value.totalPages : totalPages as int,
-      errors: errors == freezed ? _value.errors : errors as List<String>,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      results: results == freezed
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<TMDBMovieBasic>,
+      totalResults: totalResults == freezed
+          ? _value.totalResults
+          : totalResults // ignore: cast_nullable_to_non_nullable
+              as int,
+      totalPages: totalPages == freezed
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int,
+      errors: errors == freezed
+          ? _value.errors
+          : errors // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -131,13 +149,26 @@ class __$TMDBMoviesResponseCopyWithImpl<$Res>
     Object? errors = freezed,
   }) {
     return _then(_TMDBMoviesResponse(
-      page: page == freezed ? _value.page : page as int,
-      results:
-          results == freezed ? _value.results : results as List<TMDBMovieBasic>,
-      totalResults:
-          totalResults == freezed ? _value.totalResults : totalResults as int,
-      totalPages: totalPages == freezed ? _value.totalPages : totalPages as int,
-      errors: errors == freezed ? _value.errors : errors as List<String>,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      results: results == freezed
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<TMDBMovieBasic>,
+      totalResults: totalResults == freezed
+          ? _value.totalResults
+          : totalResults // ignore: cast_nullable_to_non_nullable
+              as int,
+      totalPages: totalPages == freezed
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int,
+      errors: errors == freezed
+          ? _value.errors
+          : errors // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -226,18 +257,19 @@ abstract class _TMDBMoviesResponse implements TMDBMoviesResponse {
       _$_TMDBMoviesResponse.fromJson;
 
   @override
-  int get page;
+  int get page => throw _privateConstructorUsedError;
   @override
-  List<TMDBMovieBasic> get results;
+  List<TMDBMovieBasic> get results => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'total_results')
-  int get totalResults;
+  int get totalResults => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'total_pages')
-  int get totalPages;
+  int get totalPages => throw _privateConstructorUsedError;
   @override
-  List<String> get errors;
+  List<String> get errors => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TMDBMoviesResponseCopyWith<_TMDBMoviesResponse> get copyWith;
+  _$TMDBMoviesResponseCopyWith<_TMDBMoviesResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
