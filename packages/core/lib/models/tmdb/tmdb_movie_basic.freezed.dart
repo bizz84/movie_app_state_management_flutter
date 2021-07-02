@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of core;
 
@@ -8,6 +8,10 @@ part of core;
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TMDBMovieBasic _$TMDBMovieBasicFromJson(Map<String, dynamic> json) {
   return _TMDBMovieBasic.fromJson(json);
 }
@@ -23,7 +27,7 @@ class _$TMDBMovieBasicTearOff {
       @JsonKey(name: 'vote_average') double? voteAverage,
       required String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') required String posterPath,
+      @JsonKey(name: 'poster_path') required String? posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -60,31 +64,32 @@ const $TMDBMovieBasic = _$TMDBMovieBasicTearOff();
 /// @nodoc
 mixin _$TMDBMovieBasic {
   @JsonKey(name: 'vote_count')
-  int? get voteCount;
-  int get id;
-  bool get video;
+  int? get voteCount => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
+  bool get video => throw _privateConstructorUsedError;
   @JsonKey(name: 'vote_average')
-  double? get voteAverage;
-  String get title;
-  double? get popularity;
+  double? get voteAverage => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  double? get popularity => throw _privateConstructorUsedError;
   @JsonKey(name: 'poster_path')
-  String get posterPath;
+  String? get posterPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_language')
-  String? get originalLanguage;
+  String? get originalLanguage => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_title')
-  String? get originalTitle;
+  String? get originalTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'genre_ids')
-  List<int>? get genreIds;
+  List<int>? get genreIds => throw _privateConstructorUsedError;
   @JsonKey(name: 'backdrop_path')
-  String? get backdropPath;
-  bool? get adult;
-  String? get overview;
+  String? get backdropPath => throw _privateConstructorUsedError;
+  bool? get adult => throw _privateConstructorUsedError;
+  String? get overview => throw _privateConstructorUsedError;
   @JsonKey(name: 'release_date')
-  String? get releaseDate;
+  String? get releaseDate => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TMDBMovieBasicCopyWith<TMDBMovieBasic> get copyWith;
+  $TMDBMovieBasicCopyWith<TMDBMovieBasic> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -99,7 +104,7 @@ abstract class $TMDBMovieBasicCopyWith<$Res> {
       @JsonKey(name: 'vote_average') double? voteAverage,
       String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') String posterPath,
+      @JsonKey(name: 'poster_path') String? posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -136,30 +141,62 @@ class _$TMDBMovieBasicCopyWithImpl<$Res>
     Object? releaseDate = freezed,
   }) {
     return _then(_value.copyWith(
-      voteCount: voteCount == freezed ? _value.voteCount : voteCount as int?,
-      id: id == freezed ? _value.id : id as int,
-      video: video == freezed ? _value.video : video as bool,
-      voteAverage:
-          voteAverage == freezed ? _value.voteAverage : voteAverage as double?,
-      title: title == freezed ? _value.title : title as String,
-      popularity:
-          popularity == freezed ? _value.popularity : popularity as double?,
-      posterPath:
-          posterPath == freezed ? _value.posterPath : posterPath as String,
+      voteCount: voteCount == freezed
+          ? _value.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      video: video == freezed
+          ? _value.video
+          : video // ignore: cast_nullable_to_non_nullable
+              as bool,
+      voteAverage: voteAverage == freezed
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      popularity: popularity == freezed
+          ? _value.popularity
+          : popularity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      posterPath: posterPath == freezed
+          ? _value.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String?,
       originalLanguage: originalLanguage == freezed
           ? _value.originalLanguage
-          : originalLanguage as String?,
+          : originalLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
       originalTitle: originalTitle == freezed
           ? _value.originalTitle
-          : originalTitle as String?,
-      genreIds: genreIds == freezed ? _value.genreIds : genreIds as List<int>?,
+          : originalTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      genreIds: genreIds == freezed
+          ? _value.genreIds
+          : genreIds // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
       backdropPath: backdropPath == freezed
           ? _value.backdropPath
-          : backdropPath as String?,
-      adult: adult == freezed ? _value.adult : adult as bool?,
-      overview: overview == freezed ? _value.overview : overview as String?,
-      releaseDate:
-          releaseDate == freezed ? _value.releaseDate : releaseDate as String?,
+          : backdropPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      adult: adult == freezed
+          ? _value.adult
+          : adult // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      overview: overview == freezed
+          ? _value.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String?,
+      releaseDate: releaseDate == freezed
+          ? _value.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -178,7 +215,7 @@ abstract class _$TMDBMovieBasicCopyWith<$Res>
       @JsonKey(name: 'vote_average') double? voteAverage,
       String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') String posterPath,
+      @JsonKey(name: 'poster_path') String? posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -217,30 +254,62 @@ class __$TMDBMovieBasicCopyWithImpl<$Res>
     Object? releaseDate = freezed,
   }) {
     return _then(_TMDBMovieBasic(
-      voteCount: voteCount == freezed ? _value.voteCount : voteCount as int?,
-      id: id == freezed ? _value.id : id as int,
-      video: video == freezed ? _value.video : video as bool,
-      voteAverage:
-          voteAverage == freezed ? _value.voteAverage : voteAverage as double?,
-      title: title == freezed ? _value.title : title as String,
-      popularity:
-          popularity == freezed ? _value.popularity : popularity as double?,
-      posterPath:
-          posterPath == freezed ? _value.posterPath : posterPath as String,
+      voteCount: voteCount == freezed
+          ? _value.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      video: video == freezed
+          ? _value.video
+          : video // ignore: cast_nullable_to_non_nullable
+              as bool,
+      voteAverage: voteAverage == freezed
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      popularity: popularity == freezed
+          ? _value.popularity
+          : popularity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      posterPath: posterPath == freezed
+          ? _value.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String?,
       originalLanguage: originalLanguage == freezed
           ? _value.originalLanguage
-          : originalLanguage as String?,
+          : originalLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
       originalTitle: originalTitle == freezed
           ? _value.originalTitle
-          : originalTitle as String?,
-      genreIds: genreIds == freezed ? _value.genreIds : genreIds as List<int>?,
+          : originalTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      genreIds: genreIds == freezed
+          ? _value.genreIds
+          : genreIds // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
       backdropPath: backdropPath == freezed
           ? _value.backdropPath
-          : backdropPath as String?,
-      adult: adult == freezed ? _value.adult : adult as bool?,
-      overview: overview == freezed ? _value.overview : overview as String?,
-      releaseDate:
-          releaseDate == freezed ? _value.releaseDate : releaseDate as String?,
+          : backdropPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      adult: adult == freezed
+          ? _value.adult
+          : adult // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      overview: overview == freezed
+          ? _value.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String?,
+      releaseDate: releaseDate == freezed
+          ? _value.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -285,7 +354,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
   final double? popularity;
   @override
   @JsonKey(name: 'poster_path')
-  final String posterPath;
+  final String? posterPath;
   @override
   @JsonKey(name: 'original_language')
   final String? originalLanguage;
@@ -392,7 +461,7 @@ abstract class _TMDBMovieBasic implements TMDBMovieBasic {
       @JsonKey(name: 'vote_average') double? voteAverage,
       required String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') required String posterPath,
+      @JsonKey(name: 'poster_path') required String? posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -406,41 +475,42 @@ abstract class _TMDBMovieBasic implements TMDBMovieBasic {
 
   @override
   @JsonKey(name: 'vote_count')
-  int? get voteCount;
+  int? get voteCount => throw _privateConstructorUsedError;
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  bool get video;
+  bool get video => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'vote_average')
-  double? get voteAverage;
+  double? get voteAverage => throw _privateConstructorUsedError;
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  double? get popularity;
+  double? get popularity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'poster_path')
-  String get posterPath;
+  String? get posterPath => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'original_language')
-  String? get originalLanguage;
+  String? get originalLanguage => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'original_title')
-  String? get originalTitle;
+  String? get originalTitle => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'genre_ids')
-  List<int>? get genreIds;
+  List<int>? get genreIds => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'backdrop_path')
-  String? get backdropPath;
+  String? get backdropPath => throw _privateConstructorUsedError;
   @override
-  bool? get adult;
+  bool? get adult => throw _privateConstructorUsedError;
   @override
-  String? get overview;
+  String? get overview => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'release_date')
-  String? get releaseDate;
+  String? get releaseDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TMDBMovieBasicCopyWith<_TMDBMovieBasic> get copyWith;
+  _$TMDBMovieBasicCopyWith<_TMDBMovieBasic> get copyWith =>
+      throw _privateConstructorUsedError;
 }

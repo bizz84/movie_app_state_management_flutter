@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'create_profile_state.dart';
 
@@ -8,6 +8,9 @@ part of 'create_profile_state.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 class _$CreateProfileStateTearOff {
@@ -38,27 +41,31 @@ mixin _$CreateProfileState {
     required TResult Function() noError,
     required TResult Function(String errorText) error,
     required TResult Function() loading,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? noError,
     TResult Function(String errorText)? error,
     TResult Function()? loading,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_NoError value) noError,
     required TResult Function(_Error value) error,
     required TResult Function(_Loading value) loading,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoError value)? noError,
     TResult Function(_Error value)? error,
     TResult Function(_Loading value)? loading,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -186,7 +193,10 @@ class __$ErrorCopyWithImpl<$Res> extends _$CreateProfileStateCopyWithImpl<$Res>
     Object? errorText = freezed,
   }) {
     return _then(_Error(
-      errorText == freezed ? _value.errorText : errorText as String,
+      errorText == freezed
+          ? _value.errorText
+          : errorText // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -273,9 +283,9 @@ class _$_Error implements _Error {
 abstract class _Error implements CreateProfileState {
   const factory _Error(String errorText) = _$_Error;
 
-  String get errorText;
+  String get errorText => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$ErrorCopyWith<_Error> get copyWith;
+  _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc

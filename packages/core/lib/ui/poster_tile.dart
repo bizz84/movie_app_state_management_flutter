@@ -10,7 +10,7 @@ class PosterTile extends StatelessWidget {
     this.debugIndex,
     this.favouriteBuilder,
   });
-  final String imagePath;
+  final String? imagePath;
   final int? debugIndex;
   final WidgetBuilder? favouriteBuilder;
 
@@ -63,17 +63,17 @@ class TopGradient extends StatelessWidget {
 
 class _Poster extends StatelessWidget {
   const _Poster({required this.imagePath});
-  final String imagePath;
+  final String? imagePath;
 
   @override
   Widget build(BuildContext context) {
-    //if (imagePath != null) {
-    return FadeInImage.memoryNetwork(
-      placeholder: kTransparentImage,
-      image: TMDBApi.imageUrl(imagePath, PosterSize.w154),
-      fit: BoxFit.fitWidth,
-    );
-    //}
-    //return Image.memory(kTransparentImage);
+    if (imagePath != null) {
+      return FadeInImage.memoryNetwork(
+        placeholder: kTransparentImage,
+        image: TMDBApi.imageUrl(imagePath!, PosterSize.w154),
+        fit: BoxFit.fitWidth,
+      );
+    }
+    return Image.memory(kTransparentImage);
   }
 }
