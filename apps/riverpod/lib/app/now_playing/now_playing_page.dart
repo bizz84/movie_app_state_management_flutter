@@ -10,41 +10,37 @@ final moviesModelProvider =
     StateNotifierProvider<NowPlayingModel, NowPlayingState>(
         (ref) => NowPlayingModel(api: TMDBClient()));
 
-class NowPlayingPage extends StatelessWidget {
+class NowPlayingPage extends ConsumerWidget {
   static const moviesGridKey = Key('moviesGrid');
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return ScrollableMoviesPageBuilder(
       title: 'Now Playing',
       onNextPageRequested: () {
-        final moviesModel = context.read(moviesModelProvider.notifier);
+        final moviesModel = ref.read(moviesModelProvider.notifier);
         moviesModel.fetchNextPage();
       },
       builder: (_, controller) {
-        return Consumer(
-          builder: (context, watch, _) {
-            final state = watch(moviesModelProvider);
-            return state.when(
-              data: (movies, _) => FavouritesMovieGrid(
-                key: moviesGridKey,
-                movies: movies,
-                controller: controller,
-              ),
-              dataLoading: (movies) {
-                return movies.isEmpty
-                    ? const Center(
-                        child: CircularProgressIndicator(),
-                      )
-                    : FavouritesMovieGrid(
-                        key: moviesGridKey,
-                        movies: movies,
-                        controller: controller,
-                      );
-              },
-              error: (error) => Center(child: Text(error)),
-            );
+        final state = ref.watch(moviesModelProvider);
+        return state.when(
+          data: (movies, _) => FavouritesMovieGrid(
+            key: moviesGridKey,
+            movies: movies,
+            controller: controller,
+          ),
+          dataLoading: (movies) {
+            return movies.isEmpty
+                ? const Center(
+                    child: CircularProgressIndicator(),
+                  )
+                : FavouritesMovieGrid(
+                    key: moviesGridKey,
+                    movies: movies,
+                    controller: controller,
+                  );
           },
+          error: (error) => Center(child: Text(error)),
         );
       },
     );

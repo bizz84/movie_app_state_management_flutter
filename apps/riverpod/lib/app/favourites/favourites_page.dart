@@ -18,8 +18,8 @@ final profileFavouriteMoviesProvider =
 
 class FavouritesPage extends ConsumerWidget {
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final profileFavouriteMovies = watch(profileFavouriteMoviesProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final profileFavouriteMovies = ref.watch(profileFavouriteMoviesProvider);
     return profileFavouriteMovies.when(
       data: (movies) => ScrollableMoviesPageBuilder(
         title: 'Favourites',
