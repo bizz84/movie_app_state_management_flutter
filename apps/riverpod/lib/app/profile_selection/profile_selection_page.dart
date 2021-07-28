@@ -21,18 +21,16 @@ class ProfileSelectionPage extends ConsumerWidget {
       appBar: AppBar(
         title: const Text('Profile selection'),
       ),
-      body: profilesData != null
-          ? ProfilesGrid(
-              profilesData: profilesData,
-              onAddProfile: () => addProfile(context),
-              onSelectedProfile: (profile) async {
-                final dataStore = context.read(dataStoreProvider);
-                // the selected profile is an app-state variable.
-                // changing this will cause a reload of AppStartupPage
-                await dataStore.setSelectedProfile(profile);
-              },
-            )
-          : Center(child: CircularProgressIndicator()),
+      body: ProfilesGrid(
+        profilesData: profilesData,
+        onAddProfile: () => addProfile(context),
+        onSelectedProfile: (profile) async {
+          final dataStore = context.read(dataStoreProvider);
+          // the selected profile is an app-state variable.
+          // changing this will cause a reload of AppStartupPage
+          await dataStore.setSelectedProfile(profile);
+        },
+      ),
     );
   }
 }

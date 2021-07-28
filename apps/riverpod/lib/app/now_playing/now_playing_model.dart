@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:core/models/tmdb/tmdb_movie_basic.dart';
 import 'package:core/models/tmdb/tmdb_movies_response.dart';
+import 'package:flutter/foundation.dart';
 import 'package:core/api/tmdb_api.dart';
 import 'package:core/models/app_state/now_playing_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

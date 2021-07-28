@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:core/persistence/data_store.dart';
+import 'package:flutter/foundation.dart';
 import 'package:core/models/app_state/app_startup_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -10,11 +11,11 @@ class AppStartupModel extends StateNotifier<AppStartupState> {
     init();
   }
   final DataStore dataStore;
-  StreamSubscription? _subscription;
+  late StreamSubscription _subscription;
 
   @override
   void dispose() {
-    _subscription?.cancel();
+    _subscription.cancel();
     super.dispose();
   }
 

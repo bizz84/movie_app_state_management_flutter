@@ -36,7 +36,7 @@ class FavouritesMovieGrid extends ConsumerWidget {
               data: (isFavourite) => FavouriteButton(
                 isFavourite: isFavourite,
                 onFavouriteChanged: (isFavourite) {
-                  final profilesData = watch(profilesDataProvider);
+                  final profilesData = context.read(profilesDataProvider);
                   if (profilesData.selectedId != null) {
                     final dataStore = context.read(dataStoreProvider);
                     dataStore.setFavouriteMovie(
