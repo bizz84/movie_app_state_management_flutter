@@ -1,7 +1,5 @@
 import 'package:core/models/app_models/profile.dart';
 import 'package:core/persistence/data_store.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:core/models/app_state/create_profile_state.dart';
 import 'package:uuid/uuid.dart';
