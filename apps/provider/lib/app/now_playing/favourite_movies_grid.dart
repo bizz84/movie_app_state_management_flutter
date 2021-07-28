@@ -30,14 +30,14 @@ class FavouritesMovieGrid extends StatelessWidget {
           stream: favouriteMovie,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.active) {
-              if (snapshot.data != null) {
-                final isFavourite = snapshot.data;
+              if (snapshot.hasData) {
+                final isFavourite = snapshot.data!;
                 return FavouriteButton(
                   isFavourite: isFavourite,
                   onFavouriteChanged: (isFavourite) {
                     if (profilesData.selectedId != null) {
                       dataStore.setFavouriteMovie(
-                        profileId: profilesData.selectedId,
+                        profileId: profilesData.selectedId!,
                         movie: movie,
                         isFavourite: isFavourite,
                       );

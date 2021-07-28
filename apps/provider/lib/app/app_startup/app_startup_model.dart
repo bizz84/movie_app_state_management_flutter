@@ -10,11 +10,11 @@ class AppStartupModel extends StateNotifier<AppStartupState> {
     init();
   }
   final DataStore dataStore;
-  StreamSubscription? _subscription;
+  late StreamSubscription _subscription;
 
   @override
   void dispose() {
-    _subscription?.cancel();
+    _subscription.cancel();
     super.dispose();
   }
 

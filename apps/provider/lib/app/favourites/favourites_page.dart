@@ -15,8 +15,8 @@ class FavouritesPage extends StatelessWidget {
       stream: dataStore.favouriteMovies(profileId: profilesData.selectedId!),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.active) {
-          if (snapshot.data != null) {
-            final movies = snapshot.data;
+          if (snapshot.hasData) {
+            final movies = snapshot.data!;
             return ScrollableMoviesPageBuilder(
               title: 'Favourites',
               builder: (_, __) => MoviesGrid(movies: movies),
