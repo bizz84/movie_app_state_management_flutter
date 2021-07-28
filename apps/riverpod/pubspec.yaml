@@ -25,9 +25,9 @@ dependencies:
     sdk: flutter
   core:
     path: ../../packages/core
-  cupertino_icons: ^1.0.2
-  flutter_riverpod: ^0.14.0+1
-  path_provider: ^2.0.1
+  cupertino_icons: ^1.0.3
+  flutter_riverpod: ^0.14.0+3
+  path_provider: ^2.0.2
   uuid: ^3.0.4
 
 dev_dependencies:
