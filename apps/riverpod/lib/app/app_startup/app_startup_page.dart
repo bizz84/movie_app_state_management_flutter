@@ -11,8 +11,8 @@ import 'package:movie_app_demo_flutter/top_level_providers.dart';
 /// It performs app-state initialization and returns the appropriate page.
 class AppStartupPage extends ConsumerWidget {
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final state = watch(appStartupModelProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(appStartupModelProvider);
     return state.when(
       initializing: () => const Center(child: CircularProgressIndicator()),
       needsProfile: () => ProfileSelectionPage(),

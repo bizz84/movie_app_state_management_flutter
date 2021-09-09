@@ -15,8 +15,8 @@ class ProfileSelectionPage extends ConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final profilesData = watch(profilesDataProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final profilesData = ref.watch(profilesDataProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profile selection'),
@@ -25,7 +25,7 @@ class ProfileSelectionPage extends ConsumerWidget {
         profilesData: profilesData,
         onAddProfile: () => addProfile(context),
         onSelectedProfile: (profile) async {
-          final dataStore = context.read(dataStoreProvider);
+          final dataStore = ref.read(dataStoreProvider);
           // the selected profile is an app-state variable.
           // changing this will cause a reload of AppStartupPage
           await dataStore.setSelectedProfile(profile);

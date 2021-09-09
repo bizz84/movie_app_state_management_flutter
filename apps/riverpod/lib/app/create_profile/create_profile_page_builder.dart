@@ -12,8 +12,9 @@ final createProfileModelProvider =
 });
 
 class CreateProfilePageBuilder extends ConsumerWidget {
-  Future<void> createProfile(BuildContext context, String name) async {
-    final model = context.read(createProfileModelProvider.notifier);
+  Future<void> createProfile(
+      BuildContext context, WidgetRef ref, String name) async {
+    final model = ref.read(createProfileModelProvider.notifier);
     final success = await model.createProfile(name);
     if (success) {
       Navigator.of(context).pop();
@@ -21,10 +22,10 @@ class CreateProfilePageBuilder extends ConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final state = watch(createProfileModelProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(createProfileModelProvider);
     return CreateProfilePage(
-      onSubmit: (name) => createProfile(context, name),
+      onSubmit: (name) => createProfile(context, ref, name),
       isLoading: state.maybeWhen(
         loading: () => true,
         orElse: () => false,

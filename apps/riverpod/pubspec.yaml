@@ -26,7 +26,7 @@ dependencies:
   core:
     path: ../../packages/core
   cupertino_icons: ^1.0.3
-  flutter_riverpod: ^0.14.0+3
+  flutter_riverpod: ^1.0.0-dev.7
   path_provider: ^2.0.2
   uuid: ^3.0.4
 

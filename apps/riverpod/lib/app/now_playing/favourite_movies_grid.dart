@@ -16,7 +16,7 @@ final favouriteMovieProvider =
   return Stream.empty();
 });
 
-class FavouritesMovieGrid extends ConsumerWidget {
+class FavouritesMovieGrid extends StatelessWidget {
   const FavouritesMovieGrid(
       {Key? key, required this.movies, required this.controller})
       : super(key: key);
@@ -24,21 +24,21 @@ class FavouritesMovieGrid extends ConsumerWidget {
   final ScrollController controller;
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
+  Widget build(BuildContext context) {
     return MoviesGrid(
       movies: movies,
       controller: controller,
       favouriteBuilder: (context, movie) {
         return Consumer(
-          builder: (_, watch, __) {
-            final favouriteMovie = watch(favouriteMovieProvider(movie));
+          builder: (_, ref, __) {
+            final favouriteMovie = ref.watch(favouriteMovieProvider(movie));
             return favouriteMovie.when(
               data: (isFavourite) => FavouriteButton(
                 isFavourite: isFavourite,
                 onFavouriteChanged: (isFavourite) {
-                  final profilesData = context.read(profilesDataProvider);
+                  final profilesData = ref.read(profilesDataProvider);
                   if (profilesData.selectedId != null) {
-                    final dataStore = context.read(dataStoreProvider);
+                    final dataStore = ref.read(dataStoreProvider);
                     dataStore.setFavouriteMovie(
                       profileId: profilesData.selectedId!,
                       movie: movie,
