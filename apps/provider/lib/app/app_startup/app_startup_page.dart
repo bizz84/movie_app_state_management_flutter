@@ -1,8 +1,8 @@
 import 'package:core/models/app_models/profiles_data.dart';
 import 'package:core/models/app_state/app_startup_state.dart';
 import 'package:core/persistence/data_store.dart';
-import 'package:flutter/material.dart';
 import 'package:core/ui/home_navigation_builder.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:movie_app_demo_flutter/app/app_startup/app_startup_model.dart';
 import 'package:movie_app_demo_flutter/app/favourites/favourites_page.dart';

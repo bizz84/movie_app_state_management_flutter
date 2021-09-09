@@ -1,8 +1,8 @@
 import 'package:core/models/app_models/profile.dart';
-import 'package:core/persistence/data_store.dart';
 import 'package:core/models/app_state/create_profile_state.dart';
-import 'package:uuid/uuid.dart';
+import 'package:core/persistence/data_store.dart';
 import 'package:state_notifier/state_notifier.dart';
+import 'package:uuid/uuid.dart';
 
 class CreateProfileModel extends StateNotifier<CreateProfileState> {
   CreateProfileModel({required this.dataStore})

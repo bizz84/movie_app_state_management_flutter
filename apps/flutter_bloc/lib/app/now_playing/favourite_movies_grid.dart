@@ -1,8 +1,8 @@
 import 'package:core/models/app_models/profiles_data.dart';
 import 'package:core/models/tmdb/tmdb_movie_basic.dart';
 import 'package:core/persistence/data_store.dart';
-import 'package:core/ui/movies_grid.dart';
 import 'package:core/ui/favourite_button.dart';
+import 'package:core/ui/movies_grid.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

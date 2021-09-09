@@ -1,8 +1,8 @@
 import 'dart:async';
 
+import 'package:core/models/app_state/app_startup_state.dart';
 import 'package:core/persistence/data_store.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:core/models/app_state/app_startup_state.dart';
 
 class AppStartupCubit extends Cubit<AppStartupState> {
   AppStartupCubit({required this.dataStore})

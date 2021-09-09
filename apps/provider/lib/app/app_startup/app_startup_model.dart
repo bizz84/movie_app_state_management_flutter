@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:core/persistence/data_store.dart';
 import 'package:core/models/app_state/app_startup_state.dart';
+import 'package:core/persistence/data_store.dart';
 import 'package:state_notifier/state_notifier.dart';
 
 class AppStartupModel extends StateNotifier<AppStartupState> {

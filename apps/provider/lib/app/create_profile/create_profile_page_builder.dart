@@ -1,7 +1,7 @@
-import 'package:core/persistence/data_store.dart';
-import 'package:flutter/material.dart';
 import 'package:core/models/app_state/create_profile_state.dart';
+import 'package:core/persistence/data_store.dart';
 import 'package:core/ui/create_profile_page.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:movie_app_demo_flutter/app/create_profile/create_profile_model.dart';
 import 'package:provider/provider.dart';

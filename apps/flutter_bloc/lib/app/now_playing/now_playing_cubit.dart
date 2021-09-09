@@ -1,9 +1,10 @@
 import 'dart:async';
+
+import 'package:core/api/tmdb_api.dart';
+import 'package:core/models/app_state/now_playing_state.dart';
 import 'package:core/models/tmdb/tmdb_movie_basic.dart';
 import 'package:core/models/tmdb/tmdb_movies_response.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:core/api/tmdb_api.dart';
-import 'package:core/models/app_state/now_playing_state.dart';
 
 class NowPlayingCubit extends Cubit<NowPlayingState> {
   NowPlayingCubit({required this.api})
