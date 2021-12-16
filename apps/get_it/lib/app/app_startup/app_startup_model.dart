@@ -1,10 +1,8 @@
 import 'dart:async';
 
-import 'package:core/models/app_models/profiles_data.dart';
 import 'package:core/models/app_state/app_startup_state.dart';
 import 'package:core/persistence/data_store.dart';
 import 'package:flutter/foundation.dart';
-import 'package:movie_app_demo_flutter/service_locator.dart';
 
 class AppStartupModel extends ValueNotifier<AppStartupState> {
   AppStartupModel({required this.dataStore})
