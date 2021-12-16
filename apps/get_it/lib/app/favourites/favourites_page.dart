@@ -9,35 +9,21 @@ import 'package:get_it_mixin/get_it_mixin.dart';
 class FavouritesPage extends StatelessWidget with GetItMixin {
   @override
   Widget build(BuildContext context) {
-    final dataStore = get<DataStore>();
-    final profilesData = dataStore.profilesData();
-    return StreamBuilder<ProfilesData>(
-      stream: profilesData,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          final profilesData = snapshot.data!;
-          final profileFavouriteMovies =
-              dataStore.favouriteMovies(profileId: profilesData.selectedId!);
-          return StreamBuilder<List<TMDBMovieBasic>>(
-            stream: profileFavouriteMovies,
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                return ScrollableMoviesPageBuilder(
-                  title: 'Favourites',
-                  builder: (_, __) => MoviesGrid(movies: snapshot.data!),
-                );
-              } else if (snapshot.hasError) {
-                // TODO:
-                return Container();
-              } else {
-                return Center(child: CircularProgressIndicator());
-              }
-            },
-          );
-        } else {
-          return Container();
-        }
-      },
-    );
+    final profilesData = watchStream<DataStore, ProfilesData>(
+            (dataStore) => dataStore.profilesData(), ProfilesData(profiles: {}))
+        .data;
+    if (profilesData != null && profilesData.selectedId != null) {
+      final profileFavouriteMovies =
+          watchStream<DataStore, List<TMDBMovieBasic>>(
+              (dataStore) => dataStore.favouriteMovies(
+                  profileId: profilesData.selectedId!),
+              []).data!;
+      return ScrollableMoviesPageBuilder(
+        title: 'Favourites',
+        builder: (_, __) => MoviesGrid(movies: profileFavouriteMovies),
+      );
+    } else {
+      return Container();
+    }
   }
 }

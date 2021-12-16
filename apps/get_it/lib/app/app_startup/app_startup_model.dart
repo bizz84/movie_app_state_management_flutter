@@ -25,12 +25,6 @@ class AppStartupModel extends ValueNotifier<AppStartupState> {
       } else {
         value = AppStartupState.profileLoaded(profilesData);
       }
-      // TODO: Is this the correct way of registering values that can change?
-      // if (getIt.isRegistered<ProfilesData>()) {
-      //   getIt.resetLazySingleton<ProfilesData>(instance: profilesData);
-      // } else {
-      //   getIt.registerSingleton<ProfilesData>(profilesData);
-      // }
     });
   }
 }
