@@ -1,5 +1,4 @@
 import 'package:core/models/tmdb/tmdb_movie_basic.dart';
-import 'package:flutter/foundation.dart';
 
 import '../models/app_models/profile.dart';
 import '../models/app_models/profiles_data.dart';
