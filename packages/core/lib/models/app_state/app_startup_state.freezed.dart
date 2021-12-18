@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'app_startup_state.dart';
 
@@ -8,6 +9,9 @@ part of 'app_startup_state.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 class _$AppStartupStateTearOff {
@@ -38,27 +42,45 @@ mixin _$AppStartupState {
     required TResult Function() initializing,
     required TResult Function() needsProfile,
     required TResult Function(ProfilesData profilesData) profileLoaded,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initializing,
+    TResult Function()? needsProfile,
+    TResult Function(ProfilesData profilesData)? profileLoaded,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initializing,
     TResult Function()? needsProfile,
     TResult Function(ProfilesData profilesData)? profileLoaded,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initializing value) initializing,
     required TResult Function(_NeedsProfile value) needsProfile,
     required TResult Function(_ProfileLoaded value) profileLoaded,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initializing value)? initializing,
+    TResult Function(_NeedsProfile value)? needsProfile,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initializing value)? initializing,
     TResult Function(_NeedsProfile value)? needsProfile,
     TResult Function(_ProfileLoaded value)? profileLoaded,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -98,6 +120,7 @@ class __$InitializingCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Initializing implements _Initializing {
   const _$_Initializing();
 
@@ -108,7 +131,8 @@ class _$_Initializing implements _Initializing {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Initializing);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initializing);
   }
 
   @override
@@ -122,6 +146,16 @@ class _$_Initializing implements _Initializing {
     required TResult Function(ProfilesData profilesData) profileLoaded,
   }) {
     return initializing();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initializing,
+    TResult Function()? needsProfile,
+    TResult Function(ProfilesData profilesData)? profileLoaded,
+  }) {
+    return initializing?.call();
   }
 
   @override
@@ -146,6 +180,16 @@ class _$_Initializing implements _Initializing {
     required TResult Function(_ProfileLoaded value) profileLoaded,
   }) {
     return initializing(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initializing value)? initializing,
+    TResult Function(_NeedsProfile value)? needsProfile,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+  }) {
+    return initializing?.call(this);
   }
 
   @override
@@ -187,6 +231,7 @@ class __$NeedsProfileCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_NeedsProfile implements _NeedsProfile {
   const _$_NeedsProfile();
 
@@ -197,7 +242,8 @@ class _$_NeedsProfile implements _NeedsProfile {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _NeedsProfile);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _NeedsProfile);
   }
 
   @override
@@ -211,6 +257,16 @@ class _$_NeedsProfile implements _NeedsProfile {
     required TResult Function(ProfilesData profilesData) profileLoaded,
   }) {
     return needsProfile();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initializing,
+    TResult Function()? needsProfile,
+    TResult Function(ProfilesData profilesData)? profileLoaded,
+  }) {
+    return needsProfile?.call();
   }
 
   @override
@@ -235,6 +291,16 @@ class _$_NeedsProfile implements _NeedsProfile {
     required TResult Function(_ProfileLoaded value) profileLoaded,
   }) {
     return needsProfile(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initializing value)? initializing,
+    TResult Function(_NeedsProfile value)? needsProfile,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+  }) {
+    return needsProfile?.call(this);
   }
 
   @override
@@ -282,12 +348,14 @@ class __$ProfileLoadedCopyWithImpl<$Res>
     return _then(_ProfileLoaded(
       profilesData == freezed
           ? _value.profilesData
-          : profilesData as ProfilesData,
+          : profilesData // ignore: cast_nullable_to_non_nullable
+              as ProfilesData,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_ProfileLoaded implements _ProfileLoaded {
   const _$_ProfileLoaded(this.profilesData);
 
@@ -302,15 +370,15 @@ class _$_ProfileLoaded implements _ProfileLoaded {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ProfileLoaded &&
-            (identical(other.profilesData, profilesData) ||
-                const DeepCollectionEquality()
-                    .equals(other.profilesData, profilesData)));
+        (other.runtimeType == runtimeType &&
+            other is _ProfileLoaded &&
+            const DeepCollectionEquality()
+                .equals(other.profilesData, profilesData));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(profilesData);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(profilesData));
 
   @JsonKey(ignore: true)
   @override
@@ -325,6 +393,16 @@ class _$_ProfileLoaded implements _ProfileLoaded {
     required TResult Function(ProfilesData profilesData) profileLoaded,
   }) {
     return profileLoaded(profilesData);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initializing,
+    TResult Function()? needsProfile,
+    TResult Function(ProfilesData profilesData)? profileLoaded,
+  }) {
+    return profileLoaded?.call(profilesData);
   }
 
   @override
@@ -353,6 +431,16 @@ class _$_ProfileLoaded implements _ProfileLoaded {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initializing value)? initializing,
+    TResult Function(_NeedsProfile value)? needsProfile,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+  }) {
+    return profileLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initializing value)? initializing,
     TResult Function(_NeedsProfile value)? needsProfile,
@@ -371,5 +459,6 @@ abstract class _ProfileLoaded implements AppStartupState {
 
   ProfilesData get profilesData;
   @JsonKey(ignore: true)
-  _$ProfileLoadedCopyWith<_ProfileLoaded> get copyWith;
+  _$ProfileLoadedCopyWith<_ProfileLoaded> get copyWith =>
+      throw _privateConstructorUsedError;
 }
