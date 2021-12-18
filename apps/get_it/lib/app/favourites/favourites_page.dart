@@ -10,7 +10,7 @@ class FavouritesPage extends StatelessWidget with GetItMixin {
   @override
   Widget build(BuildContext context) {
     final profilesData = watchStream<DataStore, ProfilesData>(
-            (dataStore) => dataStore.profilesData(), ProfilesData(profiles: {}))
+            (dataStore) => dataStore.profilesData(), ProfilesData())
         .data;
     if (profilesData != null && profilesData.selectedId != null) {
       final profileFavouriteMovies =
