@@ -6,7 +6,7 @@ import 'package:movie_app_demo_flutter/app/create_profile/create_profile_page_bu
 import 'package:provider/provider.dart';
 
 class ProfileSelectionPage extends StatelessWidget {
-  Future<void> addProfile(BuildContext context) async {
+  Future<void> _addProfile(BuildContext context) async {
     await Navigator.of(context).push<void>(
       MaterialPageRoute(
         fullscreenDialog: true,
@@ -24,7 +24,7 @@ class ProfileSelectionPage extends StatelessWidget {
       ),
       body: ProfilesGrid(
         profilesData: profilesData,
-        onAddProfile: () => addProfile(context),
+        onAddProfile: () => _addProfile(context),
         onSelectedProfile: (profile) async {
           final dataStore = Provider.of<DataStore>(context);
           // the selected profile is an app-state variable.

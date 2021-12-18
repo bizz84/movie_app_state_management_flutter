@@ -6,7 +6,7 @@ part 'tmdb_movie_basic.freezed.dart';
 part 'tmdb_movie_basic.g.dart';
 
 @freezed
-abstract class TMDBMovieBasic with _$TMDBMovieBasic {
+class TMDBMovieBasic with _$TMDBMovieBasic {
   factory TMDBMovieBasic({
     @JsonKey(name: 'vote_count') int? voteCount,
     required int id,

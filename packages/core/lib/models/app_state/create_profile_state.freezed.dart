@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'create_profile_state.dart';
 
@@ -8,6 +9,9 @@ part of 'create_profile_state.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 class _$CreateProfileStateTearOff {
@@ -38,27 +42,45 @@ mixin _$CreateProfileState {
     required TResult Function() noError,
     required TResult Function(String errorText) error,
     required TResult Function() loading,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? noError,
+    TResult Function(String errorText)? error,
+    TResult Function()? loading,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? noError,
     TResult Function(String errorText)? error,
     TResult Function()? loading,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_NoError value) noError,
     required TResult Function(_Error value) error,
     required TResult Function(_Loading value) loading,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NoError value)? noError,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loading value)? loading,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoError value)? noError,
     TResult Function(_Error value)? error,
     TResult Function(_Loading value)? loading,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -96,6 +118,7 @@ class __$NoErrorCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_NoError implements _NoError {
   const _$_NoError();
 
@@ -106,7 +129,8 @@ class _$_NoError implements _NoError {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _NoError);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _NoError);
   }
 
   @override
@@ -120,6 +144,16 @@ class _$_NoError implements _NoError {
     required TResult Function() loading,
   }) {
     return noError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? noError,
+    TResult Function(String errorText)? error,
+    TResult Function()? loading,
+  }) {
+    return noError?.call();
   }
 
   @override
@@ -144,6 +178,16 @@ class _$_NoError implements _NoError {
     required TResult Function(_Loading value) loading,
   }) {
     return noError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NoError value)? noError,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loading value)? loading,
+  }) {
+    return noError?.call(this);
   }
 
   @override
@@ -186,12 +230,16 @@ class __$ErrorCopyWithImpl<$Res> extends _$CreateProfileStateCopyWithImpl<$Res>
     Object? errorText = freezed,
   }) {
     return _then(_Error(
-      errorText == freezed ? _value.errorText : errorText as String,
+      errorText == freezed
+          ? _value.errorText
+          : errorText // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Error implements _Error {
   const _$_Error(this.errorText);
 
@@ -206,15 +254,14 @@ class _$_Error implements _Error {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Error &&
-            (identical(other.errorText, errorText) ||
-                const DeepCollectionEquality()
-                    .equals(other.errorText, errorText)));
+        (other.runtimeType == runtimeType &&
+            other is _Error &&
+            const DeepCollectionEquality().equals(other.errorText, errorText));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(errorText);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(errorText));
 
   @JsonKey(ignore: true)
   @override
@@ -229,6 +276,16 @@ class _$_Error implements _Error {
     required TResult Function() loading,
   }) {
     return error(errorText);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? noError,
+    TResult Function(String errorText)? error,
+    TResult Function()? loading,
+  }) {
+    return error?.call(errorText);
   }
 
   @override
@@ -257,6 +314,16 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NoError value)? noError,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loading value)? loading,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoError value)? noError,
     TResult Function(_Error value)? error,
@@ -275,7 +342,7 @@ abstract class _Error implements CreateProfileState {
 
   String get errorText;
   @JsonKey(ignore: true)
-  _$ErrorCopyWith<_Error> get copyWith;
+  _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -296,6 +363,7 @@ class __$LoadingCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Loading implements _Loading {
   const _$_Loading();
 
@@ -306,7 +374,8 @@ class _$_Loading implements _Loading {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Loading);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Loading);
   }
 
   @override
@@ -320,6 +389,16 @@ class _$_Loading implements _Loading {
     required TResult Function() loading,
   }) {
     return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? noError,
+    TResult Function(String errorText)? error,
+    TResult Function()? loading,
+  }) {
+    return loading?.call();
   }
 
   @override
@@ -344,6 +423,16 @@ class _$_Loading implements _Loading {
     required TResult Function(_Loading value) loading,
   }) {
     return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NoError value)? noError,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loading value)? loading,
+  }) {
+    return loading?.call(this);
   }
 
   @override

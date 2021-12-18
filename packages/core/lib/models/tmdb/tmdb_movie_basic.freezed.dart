@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of core;
 
@@ -8,6 +9,10 @@ part of core;
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TMDBMovieBasic _$TMDBMovieBasicFromJson(Map<String, dynamic> json) {
   return _TMDBMovieBasic.fromJson(json);
 }
@@ -49,7 +54,7 @@ class _$TMDBMovieBasicTearOff {
     );
   }
 
-  TMDBMovieBasic fromJson(Map<String, Object> json) {
+  TMDBMovieBasic fromJson(Map<String, Object?> json) {
     return TMDBMovieBasic.fromJson(json);
   }
 }
@@ -60,31 +65,32 @@ const $TMDBMovieBasic = _$TMDBMovieBasicTearOff();
 /// @nodoc
 mixin _$TMDBMovieBasic {
   @JsonKey(name: 'vote_count')
-  int? get voteCount;
-  int get id;
-  bool get video;
+  int? get voteCount => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
+  bool get video => throw _privateConstructorUsedError;
   @JsonKey(name: 'vote_average')
-  double? get voteAverage;
-  String get title;
-  double? get popularity;
+  double? get voteAverage => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  double? get popularity => throw _privateConstructorUsedError;
   @JsonKey(name: 'poster_path')
-  String get posterPath;
+  String get posterPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_language')
-  String? get originalLanguage;
+  String? get originalLanguage => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_title')
-  String? get originalTitle;
+  String? get originalTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'genre_ids')
-  List<int>? get genreIds;
+  List<int>? get genreIds => throw _privateConstructorUsedError;
   @JsonKey(name: 'backdrop_path')
-  String? get backdropPath;
-  bool? get adult;
-  String? get overview;
+  String? get backdropPath => throw _privateConstructorUsedError;
+  bool? get adult => throw _privateConstructorUsedError;
+  String? get overview => throw _privateConstructorUsedError;
   @JsonKey(name: 'release_date')
-  String? get releaseDate;
+  String? get releaseDate => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TMDBMovieBasicCopyWith<TMDBMovieBasic> get copyWith;
+  $TMDBMovieBasicCopyWith<TMDBMovieBasic> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -136,30 +142,62 @@ class _$TMDBMovieBasicCopyWithImpl<$Res>
     Object? releaseDate = freezed,
   }) {
     return _then(_value.copyWith(
-      voteCount: voteCount == freezed ? _value.voteCount : voteCount as int?,
-      id: id == freezed ? _value.id : id as int,
-      video: video == freezed ? _value.video : video as bool,
-      voteAverage:
-          voteAverage == freezed ? _value.voteAverage : voteAverage as double?,
-      title: title == freezed ? _value.title : title as String,
-      popularity:
-          popularity == freezed ? _value.popularity : popularity as double?,
-      posterPath:
-          posterPath == freezed ? _value.posterPath : posterPath as String,
+      voteCount: voteCount == freezed
+          ? _value.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      video: video == freezed
+          ? _value.video
+          : video // ignore: cast_nullable_to_non_nullable
+              as bool,
+      voteAverage: voteAverage == freezed
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      popularity: popularity == freezed
+          ? _value.popularity
+          : popularity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      posterPath: posterPath == freezed
+          ? _value.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String,
       originalLanguage: originalLanguage == freezed
           ? _value.originalLanguage
-          : originalLanguage as String?,
+          : originalLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
       originalTitle: originalTitle == freezed
           ? _value.originalTitle
-          : originalTitle as String?,
-      genreIds: genreIds == freezed ? _value.genreIds : genreIds as List<int>?,
+          : originalTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      genreIds: genreIds == freezed
+          ? _value.genreIds
+          : genreIds // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
       backdropPath: backdropPath == freezed
           ? _value.backdropPath
-          : backdropPath as String?,
-      adult: adult == freezed ? _value.adult : adult as bool?,
-      overview: overview == freezed ? _value.overview : overview as String?,
-      releaseDate:
-          releaseDate == freezed ? _value.releaseDate : releaseDate as String?,
+          : backdropPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      adult: adult == freezed
+          ? _value.adult
+          : adult // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      overview: overview == freezed
+          ? _value.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String?,
+      releaseDate: releaseDate == freezed
+          ? _value.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -217,37 +255,68 @@ class __$TMDBMovieBasicCopyWithImpl<$Res>
     Object? releaseDate = freezed,
   }) {
     return _then(_TMDBMovieBasic(
-      voteCount: voteCount == freezed ? _value.voteCount : voteCount as int?,
-      id: id == freezed ? _value.id : id as int,
-      video: video == freezed ? _value.video : video as bool,
-      voteAverage:
-          voteAverage == freezed ? _value.voteAverage : voteAverage as double?,
-      title: title == freezed ? _value.title : title as String,
-      popularity:
-          popularity == freezed ? _value.popularity : popularity as double?,
-      posterPath:
-          posterPath == freezed ? _value.posterPath : posterPath as String,
+      voteCount: voteCount == freezed
+          ? _value.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      video: video == freezed
+          ? _value.video
+          : video // ignore: cast_nullable_to_non_nullable
+              as bool,
+      voteAverage: voteAverage == freezed
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      popularity: popularity == freezed
+          ? _value.popularity
+          : popularity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      posterPath: posterPath == freezed
+          ? _value.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String,
       originalLanguage: originalLanguage == freezed
           ? _value.originalLanguage
-          : originalLanguage as String?,
+          : originalLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
       originalTitle: originalTitle == freezed
           ? _value.originalTitle
-          : originalTitle as String?,
-      genreIds: genreIds == freezed ? _value.genreIds : genreIds as List<int>?,
+          : originalTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      genreIds: genreIds == freezed
+          ? _value.genreIds
+          : genreIds // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
       backdropPath: backdropPath == freezed
           ? _value.backdropPath
-          : backdropPath as String?,
-      adult: adult == freezed ? _value.adult : adult as bool?,
-      overview: overview == freezed ? _value.overview : overview as String?,
-      releaseDate:
-          releaseDate == freezed ? _value.releaseDate : releaseDate as String?,
+          : backdropPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      adult: adult == freezed
+          ? _value.adult
+          : adult // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      overview: overview == freezed
+          ? _value.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String?,
+      releaseDate: releaseDate == freezed
+          ? _value.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TMDBMovieBasic implements _TMDBMovieBasic {
   _$_TMDBMovieBasic(
       {@JsonKey(name: 'vote_count') this.voteCount,
@@ -266,14 +335,14 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
       @JsonKey(name: 'release_date') this.releaseDate});
 
   factory _$_TMDBMovieBasic.fromJson(Map<String, dynamic> json) =>
-      _$_$_TMDBMovieBasicFromJson(json);
+      _$$_TMDBMovieBasicFromJson(json);
 
   @override
   @JsonKey(name: 'vote_count')
   final int? voteCount;
   @override
   final int id;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool video;
   @override
@@ -314,64 +383,48 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _TMDBMovieBasic &&
-            (identical(other.voteCount, voteCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.voteCount, voteCount)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.video, video) ||
-                const DeepCollectionEquality().equals(other.video, video)) &&
-            (identical(other.voteAverage, voteAverage) ||
-                const DeepCollectionEquality()
-                    .equals(other.voteAverage, voteAverage)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.popularity, popularity) ||
-                const DeepCollectionEquality()
-                    .equals(other.popularity, popularity)) &&
-            (identical(other.posterPath, posterPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.posterPath, posterPath)) &&
-            (identical(other.originalLanguage, originalLanguage) ||
-                const DeepCollectionEquality()
-                    .equals(other.originalLanguage, originalLanguage)) &&
-            (identical(other.originalTitle, originalTitle) ||
-                const DeepCollectionEquality()
-                    .equals(other.originalTitle, originalTitle)) &&
-            (identical(other.genreIds, genreIds) ||
-                const DeepCollectionEquality()
-                    .equals(other.genreIds, genreIds)) &&
-            (identical(other.backdropPath, backdropPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.backdropPath, backdropPath)) &&
-            (identical(other.adult, adult) ||
-                const DeepCollectionEquality().equals(other.adult, adult)) &&
-            (identical(other.overview, overview) ||
-                const DeepCollectionEquality()
-                    .equals(other.overview, overview)) &&
-            (identical(other.releaseDate, releaseDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.releaseDate, releaseDate)));
+        (other.runtimeType == runtimeType &&
+            other is _TMDBMovieBasic &&
+            const DeepCollectionEquality().equals(other.voteCount, voteCount) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.video, video) &&
+            const DeepCollectionEquality()
+                .equals(other.voteAverage, voteAverage) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.popularity, popularity) &&
+            const DeepCollectionEquality()
+                .equals(other.posterPath, posterPath) &&
+            const DeepCollectionEquality()
+                .equals(other.originalLanguage, originalLanguage) &&
+            const DeepCollectionEquality()
+                .equals(other.originalTitle, originalTitle) &&
+            const DeepCollectionEquality().equals(other.genreIds, genreIds) &&
+            const DeepCollectionEquality()
+                .equals(other.backdropPath, backdropPath) &&
+            const DeepCollectionEquality().equals(other.adult, adult) &&
+            const DeepCollectionEquality().equals(other.overview, overview) &&
+            const DeepCollectionEquality()
+                .equals(other.releaseDate, releaseDate));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(voteCount) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(video) ^
-      const DeepCollectionEquality().hash(voteAverage) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(popularity) ^
-      const DeepCollectionEquality().hash(posterPath) ^
-      const DeepCollectionEquality().hash(originalLanguage) ^
-      const DeepCollectionEquality().hash(originalTitle) ^
-      const DeepCollectionEquality().hash(genreIds) ^
-      const DeepCollectionEquality().hash(backdropPath) ^
-      const DeepCollectionEquality().hash(adult) ^
-      const DeepCollectionEquality().hash(overview) ^
-      const DeepCollectionEquality().hash(releaseDate);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(voteCount),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(video),
+      const DeepCollectionEquality().hash(voteAverage),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(popularity),
+      const DeepCollectionEquality().hash(posterPath),
+      const DeepCollectionEquality().hash(originalLanguage),
+      const DeepCollectionEquality().hash(originalTitle),
+      const DeepCollectionEquality().hash(genreIds),
+      const DeepCollectionEquality().hash(backdropPath),
+      const DeepCollectionEquality().hash(adult),
+      const DeepCollectionEquality().hash(overview),
+      const DeepCollectionEquality().hash(releaseDate));
 
   @JsonKey(ignore: true)
   @override
@@ -380,7 +433,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TMDBMovieBasicToJson(this);
+    return _$$_TMDBMovieBasicToJson(this);
   }
 }
 
@@ -442,5 +495,6 @@ abstract class _TMDBMovieBasic implements TMDBMovieBasic {
   String? get releaseDate;
   @override
   @JsonKey(ignore: true)
-  _$TMDBMovieBasicCopyWith<_TMDBMovieBasic> get copyWith;
+  _$TMDBMovieBasicCopyWith<_TMDBMovieBasic> get copyWith =>
+      throw _privateConstructorUsedError;
 }
