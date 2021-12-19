@@ -89,6 +89,7 @@ The current state management solutions are currently supported:
 - [x] [flutter_bloc](https://pub.dev/packages/flutter_bloc) (using `Cubit`)
 - [x] [Riverpod](https://pub.dev/packages/riverpod) (using `StateNotifier`)
 - [x] [get_it](https://pub.dev/packages/get_it) and [get_it_mixin](https://pub.dev/packages/get_it_mixin)
+- [x] [states_rebuilder](https://pub.dev/packages/states_rebuilder)
   
 I plan to add more in the future (PRs welcome!).
 
