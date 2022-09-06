@@ -18,7 +18,7 @@ Future<void> main() async {
   getIt.registerLazySingleton<CreateProfileModel>(
       () => CreateProfileModel(dataStore: dataStore));
   getIt.registerLazySingleton<NowPlayingModel>(
-      () => NowPlayingModel(api: TMDBClient()));
+      () => NowPlayingModel(api: TMDBClient.platform()));
   runApp(MyApp());
 }
 

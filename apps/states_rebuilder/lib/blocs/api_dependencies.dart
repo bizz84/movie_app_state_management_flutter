@@ -17,7 +17,7 @@ class ApiDependencies {
     await dataStoreRM.initializeState();
   }
 
-  final apiRM = RM.inject(() => TMDBClient());
+  final apiRM = RM.inject(() => TMDBClient.platform());
 }
 
 /// This is a global state
