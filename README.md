@@ -97,7 +97,6 @@ I plan to add more in the future (PRs welcome!).
 
 - Add more screens
 - Polish the UI
-- Replace `http` with `dio` to support request cancellation
 
 Feel free to open issues if you'd like certain features to be implemented (though keep your expectations low, I'm doing this for free after all 😉).
 
@@ -107,7 +106,7 @@ The "core" package of the app uses the following packages:
 
 - [Freezed](https://pub.dev/packages/freezed) for app state and [json_annotation](https://pub.dev/packages/json_annotation) for data serialization
 - [Sembast](https://pub.dev/packages/sembast) for local data persistence
-- [http](https://pub.dev/packages/http) for the API client
+- [dio](https://pub.dev/packages/dio) for the API client
 - [rxdart](https://pub.dev/packages/rxdart) for combining streams
   
 ## Getting a TMDB API key
@@ -161,6 +160,19 @@ Add the following to `ios/Runner/info.pList`:
 More information here:
 
 - [Insecure HTTP connections are disabled by default on iOS and Android.](https://flutter.dev/docs/release/breaking-changes/network-policy-ios-android)
+
+### macOS
+
+Since macOS applications are sandboxed by default, we get a `SocketException` if we haven't added the required entitlements. This has been fixes by adding these lines to `macos/Runner/DebugProfile.entitlements` and `macos/Runner/Release.entitlements`:
+
+```
+<key>com.apple.security.network.client</key>
+<true/>
+```
+
+More info here:
+
+- [How to fix "SocketException: Connection failed (Operation not permitted)" with Flutter on macOS](https://codewithandrea.com/tips/socket-exception-connection-failed-macos/)
 
 ## Credits
 
