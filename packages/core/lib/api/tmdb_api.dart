@@ -1,10 +1,6 @@
 import 'dart:async';
-import 'dart:convert';
-import 'dart:io';
 
-import 'package:cupertino_http/cupertino_client.dart';
-import 'package:http/http.dart';
-import 'package:http/io_client.dart';
+import 'package:dio/dio.dart';
 
 import '../models/tmdb/tmdb_movies_response.dart';
 import 'api_keys.dart';
@@ -50,22 +46,14 @@ class TMDBApi {
   }
 }
 
-// TODO: Convert to use DIO
 class TMDBClient {
-  TMDBClient({
-    required this.client,
-  });
-  final Client client;
-
-  factory TMDBClient.platform() {
-    final client = Platform.isIOS || Platform.isMacOS
-        ? CupertinoClient.defaultSessionConfiguration()
-        : IOClient();
-    return TMDBClient(client: client);
-  }
+  TMDBClient({required this.client});
+  factory TMDBClient.makeDefault() => TMDBClient(client: Dio());
+  final Dio client;
 
   Future<TMDBMoviesResponse> nowPlayingMovies({required int page}) async {
-    final response = await client.get(TMDBApi.moviesNowPlaying(page));
-    return TMDBMoviesResponse.fromJson(json.decode(response.body));
+    final response =
+        await client.get(TMDBApi.moviesNowPlaying(page).toString());
+    return TMDBMoviesResponse.fromJson(response.data);
   }
 }
