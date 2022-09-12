@@ -8,7 +8,7 @@ import 'package:movie_app_demo_flutter/app/now_playing/now_playing_model.dart';
 
 final moviesModelProvider =
     StateNotifierProvider<NowPlayingModel, NowPlayingState>(
-        (ref) => NowPlayingModel(api: TMDBClient.platform()));
+        (ref) => NowPlayingModel(api: TMDBClient.makeDefault()));
 
 class NowPlayingPage extends ConsumerWidget {
   static const moviesGridKey = Key('moviesGrid');

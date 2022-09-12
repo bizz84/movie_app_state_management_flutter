@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 class NowPlayingPage extends StatelessWidget {
   static Widget create(BuildContext context) {
     return StateNotifierProvider<NowPlayingModel, NowPlayingState>(
-      create: (_) => NowPlayingModel(api: TMDBClient.platform()),
+      create: (_) => NowPlayingModel(api: TMDBClient.makeDefault()),
       child: NowPlayingPage(),
     );
   }
