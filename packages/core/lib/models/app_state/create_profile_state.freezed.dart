@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'create_profile_state.dart';
@@ -11,29 +12,7 @@ part of 'create_profile_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$CreateProfileStateTearOff {
-  const _$CreateProfileStateTearOff();
-
-  _NoError noError() {
-    return const _NoError();
-  }
-
-  _Error error(String errorText) {
-    return _Error(
-      errorText,
-    );
-  }
-
-  _Loading loading() {
-    return const _Loading();
-  }
-}
-
-/// @nodoc
-const $CreateProfileState = _$CreateProfileStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$CreateProfileState {
@@ -101,20 +80,21 @@ class _$CreateProfileStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$NoErrorCopyWith<$Res> {
-  factory _$NoErrorCopyWith(_NoError value, $Res Function(_NoError) then) =
-      __$NoErrorCopyWithImpl<$Res>;
+abstract class _$$_NoErrorCopyWith<$Res> {
+  factory _$$_NoErrorCopyWith(
+          _$_NoError value, $Res Function(_$_NoError) then) =
+      __$$_NoErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$NoErrorCopyWithImpl<$Res>
+class __$$_NoErrorCopyWithImpl<$Res>
     extends _$CreateProfileStateCopyWithImpl<$Res>
-    implements _$NoErrorCopyWith<$Res> {
-  __$NoErrorCopyWithImpl(_NoError _value, $Res Function(_NoError) _then)
-      : super(_value, (v) => _then(v as _NoError));
+    implements _$$_NoErrorCopyWith<$Res> {
+  __$$_NoErrorCopyWithImpl(_$_NoError _value, $Res Function(_$_NoError) _then)
+      : super(_value, (v) => _then(v as _$_NoError));
 
   @override
-  _NoError get _value => super._value as _NoError;
+  _$_NoError get _value => super._value as _$_NoError;
 }
 
 /// @nodoc
@@ -130,7 +110,7 @@ class _$_NoError implements _NoError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _NoError);
+        (other.runtimeType == runtimeType && other is _$_NoError);
   }
 
   @override
@@ -210,26 +190,27 @@ abstract class _NoError implements CreateProfileState {
 }
 
 /// @nodoc
-abstract class _$ErrorCopyWith<$Res> {
-  factory _$ErrorCopyWith(_Error value, $Res Function(_Error) then) =
-      __$ErrorCopyWithImpl<$Res>;
+abstract class _$$_ErrorCopyWith<$Res> {
+  factory _$$_ErrorCopyWith(_$_Error value, $Res Function(_$_Error) then) =
+      __$$_ErrorCopyWithImpl<$Res>;
   $Res call({String errorText});
 }
 
 /// @nodoc
-class __$ErrorCopyWithImpl<$Res> extends _$CreateProfileStateCopyWithImpl<$Res>
-    implements _$ErrorCopyWith<$Res> {
-  __$ErrorCopyWithImpl(_Error _value, $Res Function(_Error) _then)
-      : super(_value, (v) => _then(v as _Error));
+class __$$_ErrorCopyWithImpl<$Res>
+    extends _$CreateProfileStateCopyWithImpl<$Res>
+    implements _$$_ErrorCopyWith<$Res> {
+  __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
+      : super(_value, (v) => _then(v as _$_Error));
 
   @override
-  _Error get _value => super._value as _Error;
+  _$_Error get _value => super._value as _$_Error;
 
   @override
   $Res call({
     Object? errorText = freezed,
   }) {
-    return _then(_Error(
+    return _then(_$_Error(
       errorText == freezed
           ? _value.errorText
           : errorText // ignore: cast_nullable_to_non_nullable
@@ -255,7 +236,7 @@ class _$_Error implements _Error {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Error &&
+            other is _$_Error &&
             const DeepCollectionEquality().equals(other.errorText, errorText));
   }
 
@@ -265,8 +246,8 @@ class _$_Error implements _Error {
 
   @JsonKey(ignore: true)
   @override
-  _$ErrorCopyWith<_Error> get copyWith =>
-      __$ErrorCopyWithImpl<_Error>(this, _$identity);
+  _$$_ErrorCopyWith<_$_Error> get copyWith =>
+      __$$_ErrorCopyWithImpl<_$_Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -338,28 +319,30 @@ class _$_Error implements _Error {
 }
 
 abstract class _Error implements CreateProfileState {
-  const factory _Error(String errorText) = _$_Error;
+  const factory _Error(final String errorText) = _$_Error;
 
   String get errorText;
   @JsonKey(ignore: true)
-  _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
+  _$$_ErrorCopyWith<_$_Error> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LoadingCopyWith<$Res> {
-  factory _$LoadingCopyWith(_Loading value, $Res Function(_Loading) then) =
-      __$LoadingCopyWithImpl<$Res>;
+abstract class _$$_LoadingCopyWith<$Res> {
+  factory _$$_LoadingCopyWith(
+          _$_Loading value, $Res Function(_$_Loading) then) =
+      __$$_LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$LoadingCopyWithImpl<$Res>
+class __$$_LoadingCopyWithImpl<$Res>
     extends _$CreateProfileStateCopyWithImpl<$Res>
-    implements _$LoadingCopyWith<$Res> {
-  __$LoadingCopyWithImpl(_Loading _value, $Res Function(_Loading) _then)
-      : super(_value, (v) => _then(v as _Loading));
+    implements _$$_LoadingCopyWith<$Res> {
+  __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
+      : super(_value, (v) => _then(v as _$_Loading));
 
   @override
-  _Loading get _value => super._value as _Loading;
+  _$_Loading get _value => super._value as _$_Loading;
 }
 
 /// @nodoc
@@ -375,7 +358,7 @@ class _$_Loading implements _Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Loading);
+        (other.runtimeType == runtimeType && other is _$_Loading);
   }
 
   @override

@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'now_playing_state.dart';
@@ -11,34 +12,7 @@ part of 'now_playing_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$NowPlayingStateTearOff {
-  const _$NowPlayingStateTearOff();
-
-  _Data data(List<TMDBMovieBasic> movies, bool hasReachedMax) {
-    return _Data(
-      movies,
-      hasReachedMax,
-    );
-  }
-
-  _DataLoading dataLoading(List<TMDBMovieBasic> movies) {
-    return _DataLoading(
-      movies,
-    );
-  }
-
-  _Error error(String error) {
-    return _Error(
-      error,
-    );
-  }
-}
-
-/// @nodoc
-const $NowPlayingState = _$NowPlayingStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$NowPlayingState {
@@ -107,29 +81,29 @@ class _$NowPlayingStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DataCopyWith<$Res> {
-  factory _$DataCopyWith(_Data value, $Res Function(_Data) then) =
-      __$DataCopyWithImpl<$Res>;
+abstract class _$$_DataCopyWith<$Res> {
+  factory _$$_DataCopyWith(_$_Data value, $Res Function(_$_Data) then) =
+      __$$_DataCopyWithImpl<$Res>;
   $Res call({List<TMDBMovieBasic> movies, bool hasReachedMax});
 }
 
 /// @nodoc
-class __$DataCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
-    implements _$DataCopyWith<$Res> {
-  __$DataCopyWithImpl(_Data _value, $Res Function(_Data) _then)
-      : super(_value, (v) => _then(v as _Data));
+class __$$_DataCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
+    implements _$$_DataCopyWith<$Res> {
+  __$$_DataCopyWithImpl(_$_Data _value, $Res Function(_$_Data) _then)
+      : super(_value, (v) => _then(v as _$_Data));
 
   @override
-  _Data get _value => super._value as _Data;
+  _$_Data get _value => super._value as _$_Data;
 
   @override
   $Res call({
     Object? movies = freezed,
     Object? hasReachedMax = freezed,
   }) {
-    return _then(_Data(
+    return _then(_$_Data(
       movies == freezed
-          ? _value.movies
+          ? _value._movies
           : movies // ignore: cast_nullable_to_non_nullable
               as List<TMDBMovieBasic>,
       hasReachedMax == freezed
@@ -142,34 +116,31 @@ class __$DataCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Data with DiagnosticableTreeMixin implements _Data {
-  const _$_Data(this.movies, this.hasReachedMax);
+class _$_Data implements _Data {
+  const _$_Data(final List<TMDBMovieBasic> movies, this.hasReachedMax)
+      : _movies = movies;
 
+  final List<TMDBMovieBasic> _movies;
   @override
-  final List<TMDBMovieBasic> movies;
+  List<TMDBMovieBasic> get movies {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_movies);
+  }
+
   @override
   final bool hasReachedMax;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'NowPlayingState.data(movies: $movies, hasReachedMax: $hasReachedMax)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'NowPlayingState.data'))
-      ..add(DiagnosticsProperty('movies', movies))
-      ..add(DiagnosticsProperty('hasReachedMax', hasReachedMax));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Data &&
-            const DeepCollectionEquality().equals(other.movies, movies) &&
+            other is _$_Data &&
+            const DeepCollectionEquality().equals(other._movies, _movies) &&
             const DeepCollectionEquality()
                 .equals(other.hasReachedMax, hasReachedMax));
   }
@@ -177,13 +148,13 @@ class _$_Data with DiagnosticableTreeMixin implements _Data {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(movies),
+      const DeepCollectionEquality().hash(_movies),
       const DeepCollectionEquality().hash(hasReachedMax));
 
   @JsonKey(ignore: true)
   @override
-  _$DataCopyWith<_Data> get copyWith =>
-      __$DataCopyWithImpl<_Data>(this, _$identity);
+  _$$_DataCopyWith<_$_Data> get copyWith =>
+      __$$_DataCopyWithImpl<_$_Data>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -256,41 +227,41 @@ class _$_Data with DiagnosticableTreeMixin implements _Data {
 }
 
 abstract class _Data implements NowPlayingState {
-  const factory _Data(List<TMDBMovieBasic> movies, bool hasReachedMax) =
-      _$_Data;
+  const factory _Data(
+      final List<TMDBMovieBasic> movies, final bool hasReachedMax) = _$_Data;
 
   List<TMDBMovieBasic> get movies;
   bool get hasReachedMax;
   @JsonKey(ignore: true)
-  _$DataCopyWith<_Data> get copyWith => throw _privateConstructorUsedError;
+  _$$_DataCopyWith<_$_Data> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$DataLoadingCopyWith<$Res> {
-  factory _$DataLoadingCopyWith(
-          _DataLoading value, $Res Function(_DataLoading) then) =
-      __$DataLoadingCopyWithImpl<$Res>;
+abstract class _$$_DataLoadingCopyWith<$Res> {
+  factory _$$_DataLoadingCopyWith(
+          _$_DataLoading value, $Res Function(_$_DataLoading) then) =
+      __$$_DataLoadingCopyWithImpl<$Res>;
   $Res call({List<TMDBMovieBasic> movies});
 }
 
 /// @nodoc
-class __$DataLoadingCopyWithImpl<$Res>
+class __$$_DataLoadingCopyWithImpl<$Res>
     extends _$NowPlayingStateCopyWithImpl<$Res>
-    implements _$DataLoadingCopyWith<$Res> {
-  __$DataLoadingCopyWithImpl(
-      _DataLoading _value, $Res Function(_DataLoading) _then)
-      : super(_value, (v) => _then(v as _DataLoading));
+    implements _$$_DataLoadingCopyWith<$Res> {
+  __$$_DataLoadingCopyWithImpl(
+      _$_DataLoading _value, $Res Function(_$_DataLoading) _then)
+      : super(_value, (v) => _then(v as _$_DataLoading));
 
   @override
-  _DataLoading get _value => super._value as _DataLoading;
+  _$_DataLoading get _value => super._value as _$_DataLoading;
 
   @override
   $Res call({
     Object? movies = freezed,
   }) {
-    return _then(_DataLoading(
+    return _then(_$_DataLoading(
       movies == freezed
-          ? _value.movies
+          ? _value._movies
           : movies // ignore: cast_nullable_to_non_nullable
               as List<TMDBMovieBasic>,
     ));
@@ -299,41 +270,37 @@ class __$DataLoadingCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DataLoading with DiagnosticableTreeMixin implements _DataLoading {
-  const _$_DataLoading(this.movies);
+class _$_DataLoading implements _DataLoading {
+  const _$_DataLoading(final List<TMDBMovieBasic> movies) : _movies = movies;
 
+  final List<TMDBMovieBasic> _movies;
   @override
-  final List<TMDBMovieBasic> movies;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'NowPlayingState.dataLoading(movies: $movies)';
+  List<TMDBMovieBasic> get movies {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_movies);
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'NowPlayingState.dataLoading'))
-      ..add(DiagnosticsProperty('movies', movies));
+  String toString() {
+    return 'NowPlayingState.dataLoading(movies: $movies)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DataLoading &&
-            const DeepCollectionEquality().equals(other.movies, movies));
+            other is _$_DataLoading &&
+            const DeepCollectionEquality().equals(other._movies, _movies));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(movies));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_movies));
 
   @JsonKey(ignore: true)
   @override
-  _$DataLoadingCopyWith<_DataLoading> get copyWith =>
-      __$DataLoadingCopyWithImpl<_DataLoading>(this, _$identity);
+  _$$_DataLoadingCopyWith<_$_DataLoading> get copyWith =>
+      __$$_DataLoadingCopyWithImpl<_$_DataLoading>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -406,35 +373,36 @@ class _$_DataLoading with DiagnosticableTreeMixin implements _DataLoading {
 }
 
 abstract class _DataLoading implements NowPlayingState {
-  const factory _DataLoading(List<TMDBMovieBasic> movies) = _$_DataLoading;
+  const factory _DataLoading(final List<TMDBMovieBasic> movies) =
+      _$_DataLoading;
 
   List<TMDBMovieBasic> get movies;
   @JsonKey(ignore: true)
-  _$DataLoadingCopyWith<_DataLoading> get copyWith =>
+  _$$_DataLoadingCopyWith<_$_DataLoading> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ErrorCopyWith<$Res> {
-  factory _$ErrorCopyWith(_Error value, $Res Function(_Error) then) =
-      __$ErrorCopyWithImpl<$Res>;
+abstract class _$$_ErrorCopyWith<$Res> {
+  factory _$$_ErrorCopyWith(_$_Error value, $Res Function(_$_Error) then) =
+      __$$_ErrorCopyWithImpl<$Res>;
   $Res call({String error});
 }
 
 /// @nodoc
-class __$ErrorCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
-    implements _$ErrorCopyWith<$Res> {
-  __$ErrorCopyWithImpl(_Error _value, $Res Function(_Error) _then)
-      : super(_value, (v) => _then(v as _Error));
+class __$$_ErrorCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
+    implements _$$_ErrorCopyWith<$Res> {
+  __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
+      : super(_value, (v) => _then(v as _$_Error));
 
   @override
-  _Error get _value => super._value as _Error;
+  _$_Error get _value => super._value as _$_Error;
 
   @override
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(_Error(
+    return _then(_$_Error(
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -445,30 +413,22 @@ class __$ErrorCopyWithImpl<$Res> extends _$NowPlayingStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Error with DiagnosticableTreeMixin implements _Error {
+class _$_Error implements _Error {
   const _$_Error(this.error);
 
   @override
   final String error;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'NowPlayingState.error(error: $error)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'NowPlayingState.error'))
-      ..add(DiagnosticsProperty('error', error));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Error &&
+            other is _$_Error &&
             const DeepCollectionEquality().equals(other.error, error));
   }
 
@@ -478,8 +438,8 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
 
   @JsonKey(ignore: true)
   @override
-  _$ErrorCopyWith<_Error> get copyWith =>
-      __$ErrorCopyWithImpl<_Error>(this, _$identity);
+  _$$_ErrorCopyWith<_$_Error> get copyWith =>
+      __$$_ErrorCopyWithImpl<_$_Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -552,9 +512,10 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
 }
 
 abstract class _Error implements NowPlayingState {
-  const factory _Error(String error) = _$_Error;
+  const factory _Error(final String error) = _$_Error;
 
   String get error;
   @JsonKey(ignore: true)
-  _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
+  _$$_ErrorCopyWith<_$_Error> get copyWith =>
+      throw _privateConstructorUsedError;
 }

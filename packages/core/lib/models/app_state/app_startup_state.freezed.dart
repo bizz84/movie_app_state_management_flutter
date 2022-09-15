@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'app_startup_state.dart';
@@ -11,29 +12,7 @@ part of 'app_startup_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AppStartupStateTearOff {
-  const _$AppStartupStateTearOff();
-
-  _Initializing initializing() {
-    return const _Initializing();
-  }
-
-  _NeedsProfile needsProfile() {
-    return const _NeedsProfile();
-  }
-
-  _ProfileLoaded profileLoaded(ProfilesData profilesData) {
-    return _ProfileLoaded(
-      profilesData,
-    );
-  }
-}
-
-/// @nodoc
-const $AppStartupState = _$AppStartupStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$AppStartupState {
@@ -101,22 +80,22 @@ class _$AppStartupStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$InitializingCopyWith<$Res> {
-  factory _$InitializingCopyWith(
-          _Initializing value, $Res Function(_Initializing) then) =
-      __$InitializingCopyWithImpl<$Res>;
+abstract class _$$_InitializingCopyWith<$Res> {
+  factory _$$_InitializingCopyWith(
+          _$_Initializing value, $Res Function(_$_Initializing) then) =
+      __$$_InitializingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InitializingCopyWithImpl<$Res>
+class __$$_InitializingCopyWithImpl<$Res>
     extends _$AppStartupStateCopyWithImpl<$Res>
-    implements _$InitializingCopyWith<$Res> {
-  __$InitializingCopyWithImpl(
-      _Initializing _value, $Res Function(_Initializing) _then)
-      : super(_value, (v) => _then(v as _Initializing));
+    implements _$$_InitializingCopyWith<$Res> {
+  __$$_InitializingCopyWithImpl(
+      _$_Initializing _value, $Res Function(_$_Initializing) _then)
+      : super(_value, (v) => _then(v as _$_Initializing));
 
   @override
-  _Initializing get _value => super._value as _Initializing;
+  _$_Initializing get _value => super._value as _$_Initializing;
 }
 
 /// @nodoc
@@ -132,7 +111,7 @@ class _$_Initializing implements _Initializing {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Initializing);
+        (other.runtimeType == runtimeType && other is _$_Initializing);
   }
 
   @override
@@ -212,22 +191,22 @@ abstract class _Initializing implements AppStartupState {
 }
 
 /// @nodoc
-abstract class _$NeedsProfileCopyWith<$Res> {
-  factory _$NeedsProfileCopyWith(
-          _NeedsProfile value, $Res Function(_NeedsProfile) then) =
-      __$NeedsProfileCopyWithImpl<$Res>;
+abstract class _$$_NeedsProfileCopyWith<$Res> {
+  factory _$$_NeedsProfileCopyWith(
+          _$_NeedsProfile value, $Res Function(_$_NeedsProfile) then) =
+      __$$_NeedsProfileCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$NeedsProfileCopyWithImpl<$Res>
+class __$$_NeedsProfileCopyWithImpl<$Res>
     extends _$AppStartupStateCopyWithImpl<$Res>
-    implements _$NeedsProfileCopyWith<$Res> {
-  __$NeedsProfileCopyWithImpl(
-      _NeedsProfile _value, $Res Function(_NeedsProfile) _then)
-      : super(_value, (v) => _then(v as _NeedsProfile));
+    implements _$$_NeedsProfileCopyWith<$Res> {
+  __$$_NeedsProfileCopyWithImpl(
+      _$_NeedsProfile _value, $Res Function(_$_NeedsProfile) _then)
+      : super(_value, (v) => _then(v as _$_NeedsProfile));
 
   @override
-  _NeedsProfile get _value => super._value as _NeedsProfile;
+  _$_NeedsProfile get _value => super._value as _$_NeedsProfile;
 }
 
 /// @nodoc
@@ -243,7 +222,7 @@ class _$_NeedsProfile implements _NeedsProfile {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _NeedsProfile);
+        (other.runtimeType == runtimeType && other is _$_NeedsProfile);
   }
 
   @override
@@ -323,29 +302,29 @@ abstract class _NeedsProfile implements AppStartupState {
 }
 
 /// @nodoc
-abstract class _$ProfileLoadedCopyWith<$Res> {
-  factory _$ProfileLoadedCopyWith(
-          _ProfileLoaded value, $Res Function(_ProfileLoaded) then) =
-      __$ProfileLoadedCopyWithImpl<$Res>;
+abstract class _$$_ProfileLoadedCopyWith<$Res> {
+  factory _$$_ProfileLoadedCopyWith(
+          _$_ProfileLoaded value, $Res Function(_$_ProfileLoaded) then) =
+      __$$_ProfileLoadedCopyWithImpl<$Res>;
   $Res call({ProfilesData profilesData});
 }
 
 /// @nodoc
-class __$ProfileLoadedCopyWithImpl<$Res>
+class __$$_ProfileLoadedCopyWithImpl<$Res>
     extends _$AppStartupStateCopyWithImpl<$Res>
-    implements _$ProfileLoadedCopyWith<$Res> {
-  __$ProfileLoadedCopyWithImpl(
-      _ProfileLoaded _value, $Res Function(_ProfileLoaded) _then)
-      : super(_value, (v) => _then(v as _ProfileLoaded));
+    implements _$$_ProfileLoadedCopyWith<$Res> {
+  __$$_ProfileLoadedCopyWithImpl(
+      _$_ProfileLoaded _value, $Res Function(_$_ProfileLoaded) _then)
+      : super(_value, (v) => _then(v as _$_ProfileLoaded));
 
   @override
-  _ProfileLoaded get _value => super._value as _ProfileLoaded;
+  _$_ProfileLoaded get _value => super._value as _$_ProfileLoaded;
 
   @override
   $Res call({
     Object? profilesData = freezed,
   }) {
-    return _then(_ProfileLoaded(
+    return _then(_$_ProfileLoaded(
       profilesData == freezed
           ? _value.profilesData
           : profilesData // ignore: cast_nullable_to_non_nullable
@@ -371,7 +350,7 @@ class _$_ProfileLoaded implements _ProfileLoaded {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ProfileLoaded &&
+            other is _$_ProfileLoaded &&
             const DeepCollectionEquality()
                 .equals(other.profilesData, profilesData));
   }
@@ -382,8 +361,8 @@ class _$_ProfileLoaded implements _ProfileLoaded {
 
   @JsonKey(ignore: true)
   @override
-  _$ProfileLoadedCopyWith<_ProfileLoaded> get copyWith =>
-      __$ProfileLoadedCopyWithImpl<_ProfileLoaded>(this, _$identity);
+  _$$_ProfileLoadedCopyWith<_$_ProfileLoaded> get copyWith =>
+      __$$_ProfileLoadedCopyWithImpl<_$_ProfileLoaded>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -455,10 +434,11 @@ class _$_ProfileLoaded implements _ProfileLoaded {
 }
 
 abstract class _ProfileLoaded implements AppStartupState {
-  const factory _ProfileLoaded(ProfilesData profilesData) = _$_ProfileLoaded;
+  const factory _ProfileLoaded(final ProfilesData profilesData) =
+      _$_ProfileLoaded;
 
   ProfilesData get profilesData;
   @JsonKey(ignore: true)
-  _$ProfileLoadedCopyWith<_ProfileLoaded> get copyWith =>
+  _$$_ProfileLoadedCopyWith<_$_ProfileLoaded> get copyWith =>
       throw _privateConstructorUsedError;
 }

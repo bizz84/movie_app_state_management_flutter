@@ -1,9 +1,9 @@
 import 'dart:async';
 
+import 'package:core/api/env.dart';
 import 'package:dio/dio.dart';
 
 import '../models/tmdb/tmdb_movies_response.dart';
-import 'api_keys.dart';
 
 enum PosterSize {
   w92,
@@ -34,7 +34,7 @@ class TMDBApi {
       host: 'api.themoviedb.org',
       path: '3/movie/now_playing',
       queryParameters: {
-        'api_key': tmdbApiKey,
+        'api_key': Env.tmdbApiKey,
         'include_adult': 'false',
         'page': '$page',
       },

@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of core;
@@ -11,56 +12,11 @@ part of core;
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 TMDBMovieBasic _$TMDBMovieBasicFromJson(Map<String, dynamic> json) {
   return _TMDBMovieBasic.fromJson(json);
 }
-
-/// @nodoc
-class _$TMDBMovieBasicTearOff {
-  const _$TMDBMovieBasicTearOff();
-
-  _TMDBMovieBasic call(
-      {@JsonKey(name: 'vote_count') int? voteCount,
-      required int id,
-      bool video = false,
-      @JsonKey(name: 'vote_average') double? voteAverage,
-      required String title,
-      double? popularity,
-      @JsonKey(name: 'poster_path') required String posterPath,
-      @JsonKey(name: 'original_language') String? originalLanguage,
-      @JsonKey(name: 'original_title') String? originalTitle,
-      @JsonKey(name: 'genre_ids') List<int>? genreIds,
-      @JsonKey(name: 'backdrop_path') String? backdropPath,
-      bool? adult,
-      String? overview,
-      @JsonKey(name: 'release_date') String? releaseDate}) {
-    return _TMDBMovieBasic(
-      voteCount: voteCount,
-      id: id,
-      video: video,
-      voteAverage: voteAverage,
-      title: title,
-      popularity: popularity,
-      posterPath: posterPath,
-      originalLanguage: originalLanguage,
-      originalTitle: originalTitle,
-      genreIds: genreIds,
-      backdropPath: backdropPath,
-      adult: adult,
-      overview: overview,
-      releaseDate: releaseDate,
-    );
-  }
-
-  TMDBMovieBasic fromJson(Map<String, Object?> json) {
-    return TMDBMovieBasic.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TMDBMovieBasic = _$TMDBMovieBasicTearOff();
 
 /// @nodoc
 mixin _$TMDBMovieBasic {
@@ -203,11 +159,11 @@ class _$TMDBMovieBasicCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TMDBMovieBasicCopyWith<$Res>
+abstract class _$$_TMDBMovieBasicCopyWith<$Res>
     implements $TMDBMovieBasicCopyWith<$Res> {
-  factory _$TMDBMovieBasicCopyWith(
-          _TMDBMovieBasic value, $Res Function(_TMDBMovieBasic) then) =
-      __$TMDBMovieBasicCopyWithImpl<$Res>;
+  factory _$$_TMDBMovieBasicCopyWith(
+          _$_TMDBMovieBasic value, $Res Function(_$_TMDBMovieBasic) then) =
+      __$$_TMDBMovieBasicCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'vote_count') int? voteCount,
@@ -227,15 +183,15 @@ abstract class _$TMDBMovieBasicCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TMDBMovieBasicCopyWithImpl<$Res>
+class __$$_TMDBMovieBasicCopyWithImpl<$Res>
     extends _$TMDBMovieBasicCopyWithImpl<$Res>
-    implements _$TMDBMovieBasicCopyWith<$Res> {
-  __$TMDBMovieBasicCopyWithImpl(
-      _TMDBMovieBasic _value, $Res Function(_TMDBMovieBasic) _then)
-      : super(_value, (v) => _then(v as _TMDBMovieBasic));
+    implements _$$_TMDBMovieBasicCopyWith<$Res> {
+  __$$_TMDBMovieBasicCopyWithImpl(
+      _$_TMDBMovieBasic _value, $Res Function(_$_TMDBMovieBasic) _then)
+      : super(_value, (v) => _then(v as _$_TMDBMovieBasic));
 
   @override
-  _TMDBMovieBasic get _value => super._value as _TMDBMovieBasic;
+  _$_TMDBMovieBasic get _value => super._value as _$_TMDBMovieBasic;
 
   @override
   $Res call({
@@ -254,7 +210,7 @@ class __$TMDBMovieBasicCopyWithImpl<$Res>
     Object? overview = freezed,
     Object? releaseDate = freezed,
   }) {
-    return _then(_TMDBMovieBasic(
+    return _then(_$_TMDBMovieBasic(
       voteCount: voteCount == freezed
           ? _value.voteCount
           : voteCount // ignore: cast_nullable_to_non_nullable
@@ -292,7 +248,7 @@ class __$TMDBMovieBasicCopyWithImpl<$Res>
           : originalTitle // ignore: cast_nullable_to_non_nullable
               as String?,
       genreIds: genreIds == freezed
-          ? _value.genreIds
+          ? _value._genreIds
           : genreIds // ignore: cast_nullable_to_non_nullable
               as List<int>?,
       backdropPath: backdropPath == freezed
@@ -328,11 +284,12 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
       @JsonKey(name: 'poster_path') required this.posterPath,
       @JsonKey(name: 'original_language') this.originalLanguage,
       @JsonKey(name: 'original_title') this.originalTitle,
-      @JsonKey(name: 'genre_ids') this.genreIds,
+      @JsonKey(name: 'genre_ids') final List<int>? genreIds,
       @JsonKey(name: 'backdrop_path') this.backdropPath,
       this.adult,
       this.overview,
-      @JsonKey(name: 'release_date') this.releaseDate});
+      @JsonKey(name: 'release_date') this.releaseDate})
+      : _genreIds = genreIds;
 
   factory _$_TMDBMovieBasic.fromJson(Map<String, dynamic> json) =>
       _$$_TMDBMovieBasicFromJson(json);
@@ -342,8 +299,8 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
   final int? voteCount;
   @override
   final int id;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool video;
   @override
   @JsonKey(name: 'vote_average')
@@ -361,9 +318,16 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
   @override
   @JsonKey(name: 'original_title')
   final String? originalTitle;
+  final List<int>? _genreIds;
   @override
   @JsonKey(name: 'genre_ids')
-  final List<int>? genreIds;
+  List<int>? get genreIds {
+    final value = _genreIds;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'backdrop_path')
   final String? backdropPath;
@@ -384,7 +348,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TMDBMovieBasic &&
+            other is _$_TMDBMovieBasic &&
             const DeepCollectionEquality().equals(other.voteCount, voteCount) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.video, video) &&
@@ -399,7 +363,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
                 .equals(other.originalLanguage, originalLanguage) &&
             const DeepCollectionEquality()
                 .equals(other.originalTitle, originalTitle) &&
-            const DeepCollectionEquality().equals(other.genreIds, genreIds) &&
+            const DeepCollectionEquality().equals(other._genreIds, _genreIds) &&
             const DeepCollectionEquality()
                 .equals(other.backdropPath, backdropPath) &&
             const DeepCollectionEquality().equals(other.adult, adult) &&
@@ -408,6 +372,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
                 .equals(other.releaseDate, releaseDate));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -420,7 +385,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
       const DeepCollectionEquality().hash(posterPath),
       const DeepCollectionEquality().hash(originalLanguage),
       const DeepCollectionEquality().hash(originalTitle),
-      const DeepCollectionEquality().hash(genreIds),
+      const DeepCollectionEquality().hash(_genreIds),
       const DeepCollectionEquality().hash(backdropPath),
       const DeepCollectionEquality().hash(adult),
       const DeepCollectionEquality().hash(overview),
@@ -428,31 +393,34 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
 
   @JsonKey(ignore: true)
   @override
-  _$TMDBMovieBasicCopyWith<_TMDBMovieBasic> get copyWith =>
-      __$TMDBMovieBasicCopyWithImpl<_TMDBMovieBasic>(this, _$identity);
+  _$$_TMDBMovieBasicCopyWith<_$_TMDBMovieBasic> get copyWith =>
+      __$$_TMDBMovieBasicCopyWithImpl<_$_TMDBMovieBasic>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TMDBMovieBasicToJson(this);
+    return _$$_TMDBMovieBasicToJson(
+      this,
+    );
   }
 }
 
 abstract class _TMDBMovieBasic implements TMDBMovieBasic {
   factory _TMDBMovieBasic(
-      {@JsonKey(name: 'vote_count') int? voteCount,
-      required int id,
-      bool video,
-      @JsonKey(name: 'vote_average') double? voteAverage,
-      required String title,
-      double? popularity,
-      @JsonKey(name: 'poster_path') required String posterPath,
-      @JsonKey(name: 'original_language') String? originalLanguage,
-      @JsonKey(name: 'original_title') String? originalTitle,
-      @JsonKey(name: 'genre_ids') List<int>? genreIds,
-      @JsonKey(name: 'backdrop_path') String? backdropPath,
-      bool? adult,
-      String? overview,
-      @JsonKey(name: 'release_date') String? releaseDate}) = _$_TMDBMovieBasic;
+          {@JsonKey(name: 'vote_count') final int? voteCount,
+          required final int id,
+          final bool video,
+          @JsonKey(name: 'vote_average') final double? voteAverage,
+          required final String title,
+          final double? popularity,
+          @JsonKey(name: 'poster_path') required final String posterPath,
+          @JsonKey(name: 'original_language') final String? originalLanguage,
+          @JsonKey(name: 'original_title') final String? originalTitle,
+          @JsonKey(name: 'genre_ids') final List<int>? genreIds,
+          @JsonKey(name: 'backdrop_path') final String? backdropPath,
+          final bool? adult,
+          final String? overview,
+          @JsonKey(name: 'release_date') final String? releaseDate}) =
+      _$_TMDBMovieBasic;
 
   factory _TMDBMovieBasic.fromJson(Map<String, dynamic> json) =
       _$_TMDBMovieBasic.fromJson;
@@ -495,6 +463,6 @@ abstract class _TMDBMovieBasic implements TMDBMovieBasic {
   String? get releaseDate;
   @override
   @JsonKey(ignore: true)
-  _$TMDBMovieBasicCopyWith<_TMDBMovieBasic> get copyWith =>
+  _$$_TMDBMovieBasicCopyWith<_$_TMDBMovieBasic> get copyWith =>
       throw _privateConstructorUsedError;
 }
