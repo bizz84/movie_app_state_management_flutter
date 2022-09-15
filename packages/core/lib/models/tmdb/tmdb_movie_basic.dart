@@ -14,7 +14,7 @@ class TMDBMovieBasic with _$TMDBMovieBasic {
     @JsonKey(name: 'vote_average') double? voteAverage,
     required String title,
     double? popularity,
-    @JsonKey(name: 'poster_path') required String posterPath,
+    @JsonKey(name: 'poster_path') String? posterPath,
     @JsonKey(name: 'original_language') String? originalLanguage,
     @JsonKey(name: 'original_title') String? originalTitle,
     @JsonKey(name: 'genre_ids') List<int>? genreIds,

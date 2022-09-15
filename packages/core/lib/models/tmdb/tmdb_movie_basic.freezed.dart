@@ -29,7 +29,7 @@ mixin _$TMDBMovieBasic {
   String get title => throw _privateConstructorUsedError;
   double? get popularity => throw _privateConstructorUsedError;
   @JsonKey(name: 'poster_path')
-  String get posterPath => throw _privateConstructorUsedError;
+  String? get posterPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_language')
   String? get originalLanguage => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_title')
@@ -61,7 +61,7 @@ abstract class $TMDBMovieBasicCopyWith<$Res> {
       @JsonKey(name: 'vote_average') double? voteAverage,
       String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') String posterPath,
+      @JsonKey(name: 'poster_path') String? posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -125,7 +125,7 @@ class _$TMDBMovieBasicCopyWithImpl<$Res>
       posterPath: posterPath == freezed
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       originalLanguage: originalLanguage == freezed
           ? _value.originalLanguage
           : originalLanguage // ignore: cast_nullable_to_non_nullable
@@ -172,7 +172,7 @@ abstract class _$$_TMDBMovieBasicCopyWith<$Res>
       @JsonKey(name: 'vote_average') double? voteAverage,
       String title,
       double? popularity,
-      @JsonKey(name: 'poster_path') String posterPath,
+      @JsonKey(name: 'poster_path') String? posterPath,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
@@ -238,7 +238,7 @@ class __$$_TMDBMovieBasicCopyWithImpl<$Res>
       posterPath: posterPath == freezed
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       originalLanguage: originalLanguage == freezed
           ? _value.originalLanguage
           : originalLanguage // ignore: cast_nullable_to_non_nullable
@@ -281,7 +281,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
       @JsonKey(name: 'vote_average') this.voteAverage,
       required this.title,
       this.popularity,
-      @JsonKey(name: 'poster_path') required this.posterPath,
+      @JsonKey(name: 'poster_path') this.posterPath,
       @JsonKey(name: 'original_language') this.originalLanguage,
       @JsonKey(name: 'original_title') this.originalTitle,
       @JsonKey(name: 'genre_ids') final List<int>? genreIds,
@@ -311,7 +311,7 @@ class _$_TMDBMovieBasic implements _TMDBMovieBasic {
   final double? popularity;
   @override
   @JsonKey(name: 'poster_path')
-  final String posterPath;
+  final String? posterPath;
   @override
   @JsonKey(name: 'original_language')
   final String? originalLanguage;
@@ -412,7 +412,7 @@ abstract class _TMDBMovieBasic implements TMDBMovieBasic {
           @JsonKey(name: 'vote_average') final double? voteAverage,
           required final String title,
           final double? popularity,
-          @JsonKey(name: 'poster_path') required final String posterPath,
+          @JsonKey(name: 'poster_path') final String? posterPath,
           @JsonKey(name: 'original_language') final String? originalLanguage,
           @JsonKey(name: 'original_title') final String? originalTitle,
           @JsonKey(name: 'genre_ids') final List<int>? genreIds,
@@ -441,7 +441,7 @@ abstract class _TMDBMovieBasic implements TMDBMovieBasic {
   double? get popularity;
   @override
   @JsonKey(name: 'poster_path')
-  String get posterPath;
+  String? get posterPath;
   @override
   @JsonKey(name: 'original_language')
   String? get originalLanguage;

@@ -14,7 +14,7 @@ _$_TMDBMovieBasic _$$_TMDBMovieBasicFromJson(Map<String, dynamic> json) =>
       voteAverage: (json['vote_average'] as num?)?.toDouble(),
       title: json['title'] as String,
       popularity: (json['popularity'] as num?)?.toDouble(),
-      posterPath: json['poster_path'] as String,
+      posterPath: json['poster_path'] as String?,
       originalLanguage: json['original_language'] as String?,
       originalTitle: json['original_title'] as String?,
       genreIds:
