@@ -108,6 +108,7 @@ The "core" package of the app uses the following packages:
 - [Sembast](https://pub.dev/packages/sembast) for local data persistence
 - [dio](https://pub.dev/packages/dio) for the API client
 - [rxdart](https://pub.dev/packages/rxdart) for combining streams
+- [envied](https://pub.dev/packages/envied) for API key security
   
 ## Getting a TMDB API key
 
