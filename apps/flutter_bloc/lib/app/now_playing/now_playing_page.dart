@@ -9,7 +9,7 @@ import 'package:movie_app_demo_flutter/app/now_playing/now_playing_cubit.dart';
 class NowPlayingPage extends StatelessWidget {
   static Widget create(BuildContext context) {
     return BlocProvider<NowPlayingCubit>(
-      create: (_) => NowPlayingCubit(api: TMDBClient()),
+      create: (_) => NowPlayingCubit(api: TMDBClient.makeDefault()),
       child: NowPlayingPage(),
     );
   }
