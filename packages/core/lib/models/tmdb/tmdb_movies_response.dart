@@ -7,7 +7,7 @@ part 'tmdb_movies_response.freezed.dart';
 part 'tmdb_movies_response.g.dart';
 
 @freezed
-abstract class TMDBMoviesResponse with _$TMDBMoviesResponse {
+class TMDBMoviesResponse with _$TMDBMoviesResponse {
   factory TMDBMoviesResponse({
     required int page,
     required List<TMDBMovieBasic> results,
