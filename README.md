@@ -115,12 +115,20 @@ This project uses the TMDB API to get the latest movies data.
 
 Before running the app you need to [sign up on the TMDB website](https://www.themoviedb.org/signup), then obtain an API key on the [settings API page](https://www.themoviedb.org/settings/api).
 
-Once you have this, create an `api_keys.dart` file inside `packages/core/lib/api`, and add your key:
+Once you have this, create an `.env` file inside `packages/core/`, and add your key:
 
 ```dart
-// api_keys.dart
-String tmdbApiKey = "your-api-key";
+// .env
+TMDB_KEY=your-api-key
 ```
+
+Then, run the code generator:
+
+```
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+This will generate a `env.g.dart` file inside `packages/core/lib/api`, that is used when making requests to the TMDB API.
 
 Congratulations, you're good to go. 😎
 
